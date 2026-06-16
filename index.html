@@ -19,13 +19,23 @@
       <span class="splash-subtitle">projektowanie wnętrz</span>
     </div>
   </div>
+  <script>
+    (() => {
+      const splash = document.querySelector('.splash-screen');
+      if (!splash) return;
+
+      if (sessionStorage.getItem('cosSplashSeen')) {
+        splash.remove();
+        return;
+      }
+
+      sessionStorage.setItem('cosSplashSeen', 'true');
+      window.setTimeout(() => splash.remove(), 2600);
+    })();
+  </script>
   <header class="site-header">
     <a href="#start" class="brand" aria-label="COS interiors">
       <span class="brand-mark"><img src="logo.png" alt="COS interiors"></span>
-      <span class="brand-wording">
-        <strong>COS interiors</strong>
-        <small>Interior design studio</small>
-      </span>
     </a>
 
     <nav class="nav" aria-label="Menu główne">
@@ -45,10 +55,6 @@
       <div class="hero-overlay"></div>
 
       <div class="hero-content reveal">
-        <div class="hero-logo-pill">
-          <img src="logo.png" alt="COS interiors">
-          <span>pracownia projektowania wnętrz</span>
-        </div>
         <p class="eyebrow">COS interiors studio</p>
         <h1>Wnętrza, które<br>budują nastrój.</h1>
         <p>
@@ -61,10 +67,6 @@
           <a href="#kontakt" class="btn btn-ghost">Porozmawiajmy</a>
         </div>
 
-        <div class="hero-brand-note">
-          <span>COS interiors</span>
-          <span>funkcja • klimat • detal</span>
-        </div>
       </div>
     </section>
 
