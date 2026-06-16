@@ -1,139 +1,143 @@
-const revealElements = document.querySelectorAll(".reveal");
+document.addEventListener("DOMContentLoaded", () => {
+  const splash = document.querySelector(".splash-screen");
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver((entries) => {
+  if (splash) {
+    if (prefersReducedMotion) {
+      splash.remove();
+    } else {
+      document.body.classList.add("is-splashing");
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          splash.classList.add("is-ready");
+        });
+      });
+
+      window.setTimeout(() => {
+        splash.classList.add("is-leaving");
+      }, 2450);
+
+      window.setTimeout(() => {
+        document.body.classList.remove("is-splashing");
+        splash.remove();
+      }, 3350);
+    }
+  }
+
+  const revealElements = document.querySelectorAll(".reveal");
+
+  const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
+        revealObserver.unobserve(entry.target);
       }
     });
   }, { threshold: 0.12 });
 
-  revealElements.forEach((element) => observer.observe(element));
-} else {
-  revealElements.forEach((element) => element.classList.add("visible"));
-}
+  revealElements.forEach((element) => revealObserver.observe(element));
 
-// Płynna animacja startowa. Startuje po załadowaniu strony i znika bez szarpnięcia.
-const splash = document.querySelector(".splash-screen");
-if (splash) {
-  document.body.classList.add("splash-active");
+  const header = document.querySelector(".site-header");
 
-  const hideSplash = () => {
-    window.setTimeout(() => {
-      splash.classList.add("is-leaving");
-      document.body.classList.remove("splash-active");
+  if (header) {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
 
-      window.setTimeout(() => {
-        splash.remove();
-      }, 900);
-    }, 1350);
-  };
+    const updateHeader = () => {
+      const currentScrollY = window.scrollY;
+      const scrollingDown = currentScrollY > lastScrollY;
+      const farEnough = currentScrollY > 110;
 
-  if (document.readyState === "complete") {
-    hideSplash();
-  } else {
-    window.addEventListener("load", hideSplash, { once: true });
-  }
-}
+      if (currentScrollY <= 20) {
+        header.classList.remove("is-hidden");
+      } else if (scrollingDown && farEnough) {
+        header.classList.add("is-hidden");
+      } else if (!scrollingDown) {
+        header.classList.remove("is-hidden");
+      }
 
-// Chowanie górnego paska przy scrollowaniu w dół i pokazywanie przy scrollowaniu w górę.
-const header = document.querySelector(".site-header");
-let lastScroll = window.scrollY || 0;
-let ticking = false;
+      lastScrollY = Math.max(currentScrollY, 0);
+      ticking = false;
+    };
 
-function updateHeader() {
-  if (!header) return;
-
-  const currentScroll = Math.max(window.scrollY || 0, 0);
-  const goingDown = currentScroll > lastScroll + 8;
-  const goingUp = currentScroll < lastScroll - 8;
-
-  if (currentScroll > 130 && goingDown) {
-    header.classList.add("is-hidden");
+    window.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    }, { passive: true });
   }
 
-  if (goingUp || currentScroll < 80) {
-    header.classList.remove("is-hidden");
-  }
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const selector = link.getAttribute("href");
+      const target = document.querySelector(selector);
 
-  lastScroll = currentScroll;
-  ticking = false;
-}
+      if (!target) return;
 
-window.addEventListener("scroll", () => {
-  if (!ticking) {
-    window.requestAnimationFrame(updateHeader);
-    ticking = true;
-  }
-}, { passive: true });
+      event.preventDefault();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
 
-// Płynne przewijanie do sekcji.
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener("click", (event) => {
-    const selector = link.getAttribute("href");
-    const target = document.querySelector(selector);
-    if (!target) return;
-
-    event.preventDefault();
-    header?.classList.remove("is-hidden");
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
-  });
-});
-
-// Filtrowanie galerii.
-const filterButtons = document.querySelectorAll(".filter-btn");
-const projectCards = document.querySelectorAll(".project-card");
-
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const filter = button.dataset.filter;
-
-    filterButtons.forEach((btn) => btn.classList.remove("active"));
-    button.classList.add("active");
-
-    projectCards.forEach((card) => {
-      const category = card.dataset.category;
-      const visible = filter === "all" || category === filter;
-      card.classList.toggle("hidden", !visible);
+      if (header) {
+        header.classList.add("is-hidden");
+        window.setTimeout(() => header.classList.remove("is-hidden"), 500);
+      }
     });
   });
-});
 
-// Lightbox galerii.
-const lightbox = document.getElementById("lightbox");
-const lightboxImage = document.getElementById("lightboxImage");
-const lightboxClose = document.getElementById("lightboxClose");
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const projectCards = document.querySelectorAll(".project-card");
 
-projectCards.forEach((card) => {
-  card.addEventListener("click", () => {
-    const image = card.querySelector("img");
-    if (!image || !lightbox || !lightboxImage) return;
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
 
-    lightboxImage.src = image.src;
-    lightboxImage.alt = image.alt;
-    lightbox.classList.add("active");
-    lightbox.setAttribute("aria-hidden", "false");
+      filterButtons.forEach((item) => item.classList.remove("active"));
+      button.classList.add("active");
+
+      projectCards.forEach((card) => {
+        const shouldShow = filter === "all" || card.dataset.category === filter;
+        card.classList.toggle("is-hidden", !shouldShow);
+      });
+    });
   });
-});
 
-function closeLightbox() {
-  if (!lightbox) return;
-  lightbox.classList.remove("active");
-  lightbox.setAttribute("aria-hidden", "true");
-}
+  const lightbox = document.querySelector("#lightbox");
+  const lightboxImage = document.querySelector("#lightboxImage");
+  const lightboxClose = document.querySelector("#lightboxClose");
 
-lightboxClose?.addEventListener("click", closeLightbox);
+  if (lightbox && lightboxImage && lightboxClose) {
+    projectCards.forEach((card) => {
+      card.addEventListener("click", () => {
+        const image = card.querySelector("img");
+        if (!image) return;
 
-lightbox?.addEventListener("click", (event) => {
-  if (event.target === lightbox) {
-    closeLightbox();
-  }
-});
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt || "Projekt wnętrza";
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden";
+      });
+    });
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    closeLightbox();
+    const closeLightbox = () => {
+      lightbox.classList.remove("active");
+      lightboxImage.src = "";
+      document.body.style.overflow = "";
+    };
+
+    lightboxClose.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && lightbox.classList.contains("active")) {
+        closeLightbox();
+      }
+    });
   }
 });
