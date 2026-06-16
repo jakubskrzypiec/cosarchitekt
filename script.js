@@ -15,12 +15,27 @@ if ("IntersectionObserver" in window) {
   revealElements.forEach((element) => element.classList.add("visible"));
 }
 
-// Animacja startowa działa przy każdym wejściu na stronę i sama znika po chwili.
+// Płynna animacja startowa. Startuje po załadowaniu strony i znika bez szarpnięcia.
 const splash = document.querySelector(".splash-screen");
 if (splash) {
-  window.setTimeout(() => {
-    splash.remove();
-  }, 3300);
+  document.body.classList.add("splash-active");
+
+  const hideSplash = () => {
+    window.setTimeout(() => {
+      splash.classList.add("is-leaving");
+      document.body.classList.remove("splash-active");
+
+      window.setTimeout(() => {
+        splash.remove();
+      }, 900);
+    }, 1350);
+  };
+
+  if (document.readyState === "complete") {
+    hideSplash();
+  } else {
+    window.addEventListener("load", hideSplash, { once: true });
+  }
 }
 
 // Chowanie górnego paska przy scrollowaniu w dół i pokazywanie przy scrollowaniu w górę.
