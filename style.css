@@ -855,3 +855,491 @@ a {
     padding: 34px 22px;
   }
 }
+
+
+/* =========================================================
+   NOWA WERSJA: branding COS interiors, kolory, logo, splash
+   ========================================================= */
+:root {
+  --bg: #f5f0e7;
+  --bg2: #e8dfd1;
+  --paper: rgba(255, 250, 242, 0.80);
+  --paper2: rgba(255, 250, 242, 0.96);
+  --cream: #fffaf2;
+  --text: #24241f;
+  --muted: rgba(36, 36, 31, 0.68);
+  --line: rgba(79, 89, 66, 0.18);
+  --gold: #c5a36c;
+  --brown: #9a6a47;
+  --dark: #19201a;
+  --sage: #6f7a5f;
+  --moss: #4d5840;
+  --clay: #b27958;
+  --shadow: 0 28px 80px rgba(25, 32, 26, 0.16);
+}
+
+body {
+  background:
+    radial-gradient(circle at 8% 6%, rgba(111, 122, 95, 0.18), transparent 30%),
+    radial-gradient(circle at 92% 10%, rgba(178, 121, 88, 0.16), transparent 28%),
+    linear-gradient(180deg, #fbf7ef 0%, #eee5d8 48%, #f6f1e9 100%);
+  color: var(--text);
+}
+
+::selection {
+  background: var(--sage);
+  color: var(--cream);
+}
+
+/* Jednorazowy splash z logo po wejściu na stronę */
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at top, rgba(197, 163, 108, 0.16), transparent 36%),
+    linear-gradient(135deg, #141814 0%, #243022 48%, #171c17 100%);
+  pointer-events: none;
+  animation: splashFade 2.35s ease forwards;
+}
+
+.splash-card {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  padding: 32px 42px;
+  border: 1px solid rgba(255, 250, 242, 0.14);
+  background: rgba(255, 250, 242, 0.055);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(16px);
+  animation: splashPop 1.35s cubic-bezier(.2, .9, .2, 1) both;
+}
+
+.splash-logo {
+  min-width: 168px;
+  min-height: 74px;
+  display: grid;
+  place-items: center;
+  padding: 14px 18px;
+  background: rgba(255, 250, 242, 0.08);
+  border: 1px solid rgba(255, 250, 242, 0.12);
+}
+
+.splash-logo img {
+  width: 150px;
+  max-height: 58px;
+  object-fit: contain;
+}
+
+.splash-name {
+  color: var(--cream);
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+
+.splash-subtitle {
+  color: rgba(255, 250, 242, 0.62);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+@keyframes splashFade {
+  0%, 72% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes splashPop {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.92);
+  }
+  42% {
+    opacity: 1;
+    transform: translateY(0) scale(1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Header i lepiej widoczne logo */
+.site-header {
+  background: rgba(255, 250, 242, 0.90);
+  border: 1px solid rgba(79, 89, 66, 0.18);
+  box-shadow: 0 18px 60px rgba(25, 32, 26, 0.12);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-width: max-content;
+  padding: 8px 16px 8px 10px;
+  background: var(--dark);
+  color: var(--cream);
+  border: 1px solid rgba(255, 250, 242, 0.10);
+  border-radius: 999px;
+  box-shadow: 0 16px 38px rgba(25, 32, 26, 0.18);
+}
+
+.brand-mark {
+  width: 70px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  padding: 6px;
+  background: rgba(255, 250, 242, 0.08);
+  border-radius: 999px;
+}
+
+.brand-mark img {
+  width: 58px;
+  max-height: 28px;
+  object-fit: contain;
+}
+
+.brand-wording {
+  display: grid;
+  gap: 1px;
+  line-height: 1;
+}
+
+.brand-wording strong {
+  font-size: 13px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+.brand-wording small {
+  color: rgba(255, 250, 242, 0.56);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.nav a {
+  color: rgba(36, 36, 31, 0.68);
+}
+
+.nav a:hover,
+.eyebrow,
+.offer-card span,
+.project-card span,
+.process-list span,
+.contact-grid span {
+  color: var(--sage);
+}
+
+.header-cta {
+  border-color: rgba(79, 89, 66, 0.24);
+  color: var(--dark);
+}
+
+.header-cta:hover,
+.btn-primary,
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--sage);
+  color: var(--cream);
+}
+
+/* Hero: mniej tekstu w prawym dole, więcej marki w głównym kadrze */
+.hero {
+  min-height: 76vh;
+  padding: 132px 8vw 72px;
+}
+
+.hero::after {
+  content: "COS";
+  position: absolute;
+  right: 5vw;
+  bottom: -0.24em;
+  z-index: -1;
+  color: rgba(255, 250, 242, 0.075);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(110px, 20vw, 260px);
+  font-weight: 700;
+  letter-spacing: -0.08em;
+  pointer-events: none;
+}
+
+.hero-overlay {
+  background:
+    linear-gradient(90deg, rgba(18, 24, 19, 0.82) 0%, rgba(18, 24, 19, 0.54) 44%, rgba(18, 24, 19, 0.12) 100%),
+    linear-gradient(180deg, rgba(18, 24, 19, 0.14), rgba(18, 24, 19, 0.76));
+}
+
+.hero-content {
+  width: min(650px, 100%);
+  padding: 42px;
+  background: rgba(25, 32, 26, 0.70);
+  border: 1px solid rgba(255, 250, 242, 0.15);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.22);
+}
+
+.hero-logo-pill {
+  width: max-content;
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 9px 15px 9px 10px;
+  background: rgba(255, 250, 242, 0.10);
+  border: 1px solid rgba(255, 250, 242, 0.12);
+  border-radius: 999px;
+}
+
+.hero-logo-pill img {
+  width: 82px;
+  max-height: 32px;
+  object-fit: contain;
+}
+
+.hero-logo-pill span {
+  color: rgba(255, 250, 242, 0.72);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero .eyebrow,
+.contact-panel .eyebrow {
+  color: var(--gold);
+}
+
+.hero h1 {
+  font-size: clamp(40px, 5.7vw, 72px);
+}
+
+.hero p {
+  color: rgba(255, 250, 242, 0.78);
+}
+
+.hero-brand-note {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+  color: rgba(255, 250, 242, 0.68);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero-brand-note span {
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 250, 242, 0.12);
+  background: rgba(255, 250, 242, 0.06);
+}
+
+.hero-side {
+  display: none !important;
+}
+
+.btn-primary {
+  border: 1px solid transparent;
+}
+
+.btn-ghost:hover {
+  background: var(--cream);
+  color: var(--dark);
+}
+
+/* Sekcje: spokojniejszy, bardziej markowy klimat */
+.intro,
+.section,
+.split-content {
+  color: var(--text);
+}
+
+.intro-media::before {
+  border-color: rgba(111, 122, 95, 0.32);
+}
+
+.intro-media img,
+.project-card,
+.split-image img {
+  border-radius: 2px;
+}
+
+.brand-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.brand-points span {
+  padding: 12px 15px;
+  background: rgba(111, 122, 95, 0.10);
+  border: 1px solid rgba(111, 122, 95, 0.18);
+  color: var(--moss);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.dark-section,
+.split-content {
+  background:
+    radial-gradient(circle at 80% 0%, rgba(111, 122, 95, 0.15), transparent 34%),
+    linear-gradient(135deg, #f3ece0, #e6dccd);
+}
+
+.projects {
+  background:
+    radial-gradient(circle at 5% 0%, rgba(178, 121, 88, 0.10), transparent 32%),
+    #f6f1e9;
+}
+
+.offer-card {
+  background: rgba(255, 250, 242, 0.68);
+}
+
+.offer-card:hover {
+  background: var(--cream);
+  box-shadow: 0 20px 58px rgba(25, 32, 26, 0.12);
+}
+
+.filter-btn {
+  border-color: rgba(79, 89, 66, 0.18);
+  background: rgba(255, 250, 242, 0.70);
+  color: rgba(36, 36, 31, 0.72);
+}
+
+.project-card {
+  background: #ddd2c3;
+}
+
+.project-card div {
+  background: rgba(25, 32, 26, 0.74);
+}
+
+.project-card span {
+  color: var(--gold);
+}
+
+.contact-section::after {
+  background:
+    linear-gradient(90deg, rgba(18, 24, 19, 0.90), rgba(18, 24, 19, 0.66), rgba(18, 24, 19, 0.34)),
+    linear-gradient(180deg, rgba(18, 24, 19, 0.10), rgba(18, 24, 19, 0.84));
+}
+
+.contact-panel {
+  background: rgba(25, 32, 26, 0.72);
+}
+
+.contact-grid a:hover {
+  background: var(--cream);
+  color: var(--dark);
+}
+
+/* Footer: mocniejszy branding i widoczne białe logo */
+.footer {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(197, 163, 108, 0.12), transparent 30%),
+    linear-gradient(135deg, #141814 0%, #20291e 58%, #151915 100%);
+  color: rgba(255, 250, 242, 0.76);
+}
+
+.footer-brand img {
+  width: 132px;
+  max-height: 58px;
+  object-fit: contain;
+  padding: 12px 16px;
+  margin-bottom: 18px;
+  background: rgba(255, 250, 242, 0.075);
+  border: 1px solid rgba(255, 250, 242, 0.11);
+}
+
+.footer h4 {
+  color: var(--cream);
+}
+
+.footer a:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  border-top-color: rgba(255, 250, 242, 0.12);
+}
+
+@media (max-width: 1080px) {
+  .site-header {
+    background: rgba(255, 250, 242, 0.95);
+  }
+
+  .brand {
+    justify-content: center;
+    width: 100%;
+    border-radius: 22px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 56px 20px 64px;
+  }
+
+  .hero-content {
+    padding: 34px 24px;
+  }
+
+  .hero-logo-pill {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .splash-card {
+    width: calc(100% - 40px);
+    padding: 28px 22px;
+  }
+
+  .splash-logo {
+    min-width: 148px;
+  }
+
+  .splash-logo img {
+    width: 132px;
+  }
+
+  .brand-wording small {
+    display: none;
+  }
+
+  .brand-mark {
+    width: 64px;
+  }
+
+  .hero-logo-pill {
+    align-items: flex-start;
+    border-radius: 18px;
+    flex-direction: column;
+  }
+
+  .hero-logo-pill img {
+    width: 92px;
+  }
+
+  .hero-brand-note span {
+    width: 100%;
+  }
+}
