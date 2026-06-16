@@ -5,26 +5,69 @@ if ("IntersectionObserver" in window) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.14 });
+  }, { threshold: 0.12 });
 
   revealElements.forEach((element) => observer.observe(element));
 } else {
   revealElements.forEach((element) => element.classList.add("visible"));
 }
 
+// Animacja startowa działa przy każdym wejściu na stronę i sama znika po chwili.
+const splash = document.querySelector(".splash-screen");
+if (splash) {
+  window.setTimeout(() => {
+    splash.remove();
+  }, 3300);
+}
+
+// Chowanie górnego paska przy scrollowaniu w dół i pokazywanie przy scrollowaniu w górę.
+const header = document.querySelector(".site-header");
+let lastScroll = window.scrollY || 0;
+let ticking = false;
+
+function updateHeader() {
+  if (!header) return;
+
+  const currentScroll = Math.max(window.scrollY || 0, 0);
+  const goingDown = currentScroll > lastScroll + 8;
+  const goingUp = currentScroll < lastScroll - 8;
+
+  if (currentScroll > 130 && goingDown) {
+    header.classList.add("is-hidden");
+  }
+
+  if (goingUp || currentScroll < 80) {
+    header.classList.remove("is-hidden");
+  }
+
+  lastScroll = currentScroll;
+  ticking = false;
+}
+
+window.addEventListener("scroll", () => {
+  if (!ticking) {
+    window.requestAnimationFrame(updateHeader);
+    ticking = true;
+  }
+}, { passive: true });
+
+// Płynne przewijanie do sekcji.
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {
-    const target = document.querySelector(link.getAttribute("href"));
-
+    const selector = link.getAttribute("href");
+    const target = document.querySelector(selector);
     if (!target) return;
 
     event.preventDefault();
+    header?.classList.remove("is-hidden");
     target.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });
 
+// Filtrowanie galerii.
 const filterButtons = document.querySelectorAll(".filter-btn");
 const projectCards = document.querySelectorAll(".project-card");
 
@@ -37,16 +80,13 @@ filterButtons.forEach((button) => {
 
     projectCards.forEach((card) => {
       const category = card.dataset.category;
-
-      if (filter === "all" || category === filter) {
-        card.classList.remove("hidden");
-      } else {
-        card.classList.add("hidden");
-      }
+      const visible = filter === "all" || category === filter;
+      card.classList.toggle("hidden", !visible);
     });
   });
 });
 
+// Lightbox galerii.
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightboxImage");
 const lightboxClose = document.getElementById("lightboxClose");
@@ -54,31 +94,31 @@ const lightboxClose = document.getElementById("lightboxClose");
 projectCards.forEach((card) => {
   card.addEventListener("click", () => {
     const image = card.querySelector("img");
-
     if (!image || !lightbox || !lightboxImage) return;
 
     lightboxImage.src = image.src;
     lightboxImage.alt = image.alt;
     lightbox.classList.add("active");
+    lightbox.setAttribute("aria-hidden", "false");
   });
 });
 
-if (lightboxClose) {
-  lightboxClose.addEventListener("click", () => {
-    lightbox.classList.remove("active");
-  });
+function closeLightbox() {
+  if (!lightbox) return;
+  lightbox.classList.remove("active");
+  lightbox.setAttribute("aria-hidden", "true");
 }
 
-if (lightbox) {
-  lightbox.addEventListener("click", (event) => {
-    if (event.target === lightbox) {
-      lightbox.classList.remove("active");
-    }
-  });
-}
+lightboxClose?.addEventListener("click", closeLightbox);
+
+lightbox?.addEventListener("click", (event) => {
+  if (event.target === lightbox) {
+    closeLightbox();
+  }
+});
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && lightbox) {
-    lightbox.classList.remove("active");
+  if (event.key === "Escape") {
+    closeLightbox();
   }
 });
