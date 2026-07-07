@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>COS interiors | Projektowanie wnętrz</title>
-  <meta name="description" content="COS interiors. Projektowanie wnętrz mieszkań i domów. Jasne, funkcjonalne i dopracowane przestrzenie." />
-
+  <title>COS interiors | Projektowanie wnętrz Olkusz</title>
+  <meta name="description" content="COS interiors — projektowanie wnętrz mieszkań i domów. Projekty, oferta, proces, ankieta i kontakt." />
+  <meta name="theme-color" content="#2f261f" />
+  <meta property="og:title" content="COS interiors | Projektowanie wnętrz Olkusz" />
+  <meta property="og:description" content="COS interiors — projektowanie wnętrz mieszkań i domów. Projekty, oferta, proces, ankieta i kontakt." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="hero.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=cos-pages-2">
 </head>
 <body>
   <div class="splash-screen" aria-hidden="true">
@@ -20,317 +24,154 @@
       <span class="splash-subtitle">pracownia projektowania wnętrz</span>
     </div>
   </div>
-
   <header class="site-header">
-    <a href="#start" class="brand" aria-label="COS interiors">
+    <a href="index.html" class="brand" aria-label="COS interiors">
       <span class="brand-mark"><img src="logo-black.png" alt="COS interiors"></span>
     </a>
 
+    <button class="menu-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+
     <nav class="nav" aria-label="Menu główne">
-      <a href="#o-nas">O nas</a>
-      <a href="#oferta">Oferta</a>
-      <a href="#realizacje">Realizacje</a>
-      <a href="#proces">Proces</a>
-      <a href="#kontakt">Kontakt</a>
+      <a class="active" href="index.html">Start</a>
+      <a class="" href="projekty.html">Projekty</a>
+      <a class="" href="oferta.html">Oferta</a>
+      <a class="" href="proces.html">Proces</a>
+      <a class="" href="ankieta.html">Ankieta</a>
+      <a class="" href="kontakt.html">Kontakt</a>
     </nav>
   </header>
-
   <main>
     <section class="hero" id="start">
       <div class="hero-bg"></div>
-      <div class="hero-overlay"></div>
+      <div class="hero-shade"></div>
 
       <div class="hero-content reveal">
-        <p class="eyebrow">Pracownia projektowania wnętrz</p>
-        <h1>Jasne wnętrza z charakterem.</h1>
+        <p class="eyebrow">COS interiors / Olkusz</p>
+        <h1>Wnętrza, które prowadzą od zachwytu do decyzji.</h1>
         <p>
-          Projektujemy mieszkania i domy w spokojnym, eleganckim stylu. Dbamy o układ,
-          materiały, światło i codzienną wygodę, żeby wnętrze było piękne i praktyczne.
+          Projektujemy mieszkania i domy w spokojnym, eleganckim stylu. Zobacz estetykę,
+          poznaj zakres współpracy i wyślij krótką ankietę, aby rozpocząć rozmowę.
         </p>
 
         <div class="hero-actions">
-          <a href="#realizacje" class="btn btn-primary">Zobacz realizacje</a>
-          <a href="#kontakt" class="btn btn-ghost">Porozmawiajmy</a>
+          <a href="projekty.html" class="btn btn-primary">Zobacz projekty</a>
+          <a href="oferta.html" class="btn btn-ghost">Poznaj ofertę</a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://www.instagram.com/cos_interiors/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/p/COS-interiors-100088112425953/" target="_blank" rel="noopener">Facebook</a>
         </div>
       </div>
+
+      <a href="projekty.html" class="scroll-hint">zobacz projekty</a>
     </section>
 
     <section class="intro" id="o-nas">
       <div class="intro-media reveal">
-        <img src="salon.jfif" alt="Elegancki salon" loading="lazy">
+        <img src="salon.jfif" alt="Elegancki salon zaprojektowany przez COS interiors" loading="lazy">
       </div>
 
       <div class="intro-text reveal">
-        <p class="eyebrow">O nas</p>
-        <h2>Projektujemy wnętrza, w których dobrze się mieszka.</h2>
+        <p class="eyebrow">Studio</p>
+        <h2>Projekt zaczyna się od sposobu, w jaki chcesz mieszkać.</h2>
         <p>
-          COS interiors prowadzi projekt od pierwszej rozmowy po gotową koncepcję.
-          Łączymy estetykę z praktycznym podejściem, dlatego każdy pomysł ma sens w codziennym użytkowaniu.
+          COS interiors prowadzi klienta od pierwszej rozmowy przez kierunek stylistyczny,
+          funkcję wnętrza i wizualizacje, aż do decyzji, które realnie pomagają w realizacji.
         </p>
         <p>
-          Zwracamy uwagę na proporcje, funkcję, światło i materiały. Dzięki temu wnętrze jest spójne,
-          ale nadal dopasowane do stylu życia domowników.
+          Strona jest ułożona jak ścieżka: najpierw estetyka i projekty, potem oferta,
+          proces i krótka ankieta, która pozwala szybko zebrać najważniejsze informacje.
         </p>
       </div>
     </section>
 
-    <section class="section offer-section" id="oferta">
+    <section class="section home-path">
       <div class="section-head reveal">
-        <p class="eyebrow">Oferta</p>
-        <h2>Zakres współpracy dobieramy do potrzeb.</h2>
-        <p>
-          Możemy przygotować samą koncepcję, pełny projekt z wizualizacjami albo pomóc w najważniejszych
-          decyzjach dotyczących układu, materiałów i wyposażenia.
-        </p>
+        <p class="eyebrow">Ścieżka</p>
+        <h2>Od inspiracji do pierwszej rozmowy.</h2>
       </div>
 
-      <div class="offer-grid">
-        <article class="offer-card reveal">
+      <div class="path-grid">
+        <a class="path-card reveal" href="projekty.html">
           <span>01</span>
-          <h3>Koncepcja wnętrza</h3>
-          <p>Pomysł na układ, kolorystykę, styl i ogólny kierunek projektu.</p>
-        </article>
-
-        <article class="offer-card reveal">
+          <h3>Projekty</h3>
+          <p>Zobacz wybrane przestrzenie i klimat pracy COS interiors.</p>
+        </a>
+        <a class="path-card reveal" href="oferta.html">
           <span>02</span>
-          <h3>Projekt kompleksowy</h3>
-          <p>Spójny projekt z rozwiązaniami dopasowanymi do konkretnego wnętrza.</p>
-        </article>
-
-        <article class="offer-card reveal">
+          <h3>Oferta</h3>
+          <p>Sprawdź zakres: koncepcja, projekt kompleksowy, wizualizacje i konsultacje.</p>
+        </a>
+        <a class="path-card reveal" href="proces.html">
           <span>03</span>
-          <h3>Wizualizacje</h3>
-          <p>Realistyczne kadry, które pomagają zobaczyć efekt przed realizacją.</p>
-        </article>
-
-        <article class="offer-card reveal">
+          <h3>Proces</h3>
+          <p>Poznaj etapy współpracy od rozmowy do gotowego kierunku.</p>
+        </a>
+        <a class="path-card reveal" href="ankieta.html">
           <span>04</span>
-          <h3>Konsultacje</h3>
-          <p>Wsparcie przy wyborze układu, materiałów, kolorów i wyposażenia.</p>
-        </article>
+          <h3>Ankieta</h3>
+          <p>Wyślij metraż, lokalizację, termin i kontakt.</p>
+        </a>
       </div>
     </section>
 
-    <section class="section projects" id="realizacje">
-      <div class="section-head reveal">
-        <p class="eyebrow">Realizacje</p>
-        <h2>Wybrane projekty</h2>
-        <p>
-          W galerii znajdziesz kuchnie, łazienki, salony i strefy odpoczynku. To przykłady wnętrz
-          utrzymanych w ciepłej, jasnej kolorystyce i spokojnej formie.
-        </p>
+    <section class="section home-preview">
+      <div class="preview-copy reveal">
+        <p class="eyebrow">Wybrane projekty</p>
+        <h2>Spokojne wnętrza, ciepłe materiały i dopracowane detale.</h2>
+        <p>Pełna prezentacja projektów znajduje się na osobnej podstronie.</p>
+        <a href="projekty.html" class="btn btn-primary">Przejdź do projektów</a>
       </div>
-
-      <div class="gallery-filters reveal">
-        <button class="filter-btn active" data-filter="all">Wszystkie</button>
-        <button class="filter-btn" data-filter="kuchnie">Kuchnie</button>
-        <button class="filter-btn" data-filter="lazienki">Łazienki</button>
-        <button class="filter-btn" data-filter="salony">Salony</button>
-        <button class="filter-btn" data-filter="pozostale">Pozostałe</button>
-      </div>
-
-      <div class="projects-grid">
-        <article class="project-card reveal" data-category="salony">
-          <img src="salon2.jfif" alt="Projekt salonu" loading="lazy">
-          <div>
-            <span>Salon</span>
-            <h3>Ciepła strefa dzienna</h3>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="kuchnie">
-          <img src="kuchnia.jfif" alt="Projekt kuchni" loading="lazy">
-          <div>
-            <span>Kuchnia</span>
-            <h3>Elegancja w prostych formach</h3>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="lazienki">
-          <img src="lazienka.jfif" alt="Projekt łazienki" loading="lazy">
-          <div>
-            <span>Łazienka</span>
-            <h3>Minimalizm i wygoda</h3>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="salony">
-          <img src="kominek.jfif" alt="Projekt z kominkiem" loading="lazy">
-          <div>
-            <span>Strefa dzienna</span>
-            <h3>Światło, faktury i spokój</h3>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="kuchnie">
-          <img src="kuchnia2.jfif" alt="Projekt kuchni" loading="lazy">
-          <div>
-            <span>Kuchnia</span>
-            <h3>Praktyczny układ na co dzień</h3>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="lazienki">
-          <img src="lazienka2.jfif" alt="Projekt łazienki" loading="lazy">
-          <div>
-            <span>Łazienka</span>
-            <h3>Spójne materiały i komfort</h3>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="salony">
-          <img src="sofa.jfif" alt="Projekt sofy i salonu" loading="lazy">
-          <div>
-            <span>Salon</span>
-            <h3>Miękka, przytulna przestrzeń</h3>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="kuchnie">
-          <img src="kuchnia3.jfif" alt="Projekt kuchni" loading="lazy">
-          <div>
-            <span>Kuchnia</span>
-            <h3>Nowoczesna zabudowa</h3>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="lazienki">
-          <img src="lazienak3.jfif" alt="Projekt łazienki" loading="lazy">
-          <div>
-            <span>Łazienka</span>
-            <h3>Czysta forma i ciepłe światło</h3>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="kuchnie">
-          <img src="kuchniainna.jfif" alt="Projekt kuchni" loading="lazy">
-          <div>
-            <span>Kuchnia</span>
-            <h3>Jasna zabudowa</h3>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="lazienki">
-          <img src="lazienkainna.jfif" alt="Projekt łazienki" loading="lazy">
-          <div>
-            <span>Łazienka</span>
-            <h3>Naturalne odcienie</h3>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="pozostale">
-          <img src="sypialnia.jfif" alt="Projekt sypialni" loading="lazy">
-          <div>
-            <span>Sypialnia</span>
-            <h3>Spokojna przestrzeń odpoczynku</h3>
-          </div>
-        </article>
+      <div class="preview-images reveal">
+        <img src="salon2.jfif" alt="Projekt salonu" loading="lazy">
+        <img src="kuchnia.jfif" alt="Projekt kuchni" loading="lazy">
       </div>
     </section>
 
-    <section class="split-section" id="proces">
-      <div class="split-image reveal">
-        <img src="kominek2.jfif" alt="Nastrojowy projekt wnętrza z kominkiem" loading="lazy">
-      </div>
-
-      <div class="split-content reveal">
-        <p class="eyebrow">Proces</p>
-        <h2>Od rozmowy do gotowego wnętrza</h2>
-
-        <div class="process-list">
-          <article>
-            <span>01</span>
-            <div>
-              <h3>Poznanie potrzeb</h3>
-              <p>Rozmawiamy o stylu życia, funkcjach, budżecie i oczekiwanym klimacie wnętrza.</p>
-            </div>
-          </article>
-
-          <article>
-            <span>02</span>
-            <div>
-              <h3>Koncepcja i układ</h3>
-              <p>Tworzymy kierunek projektowy, układ funkcjonalny i bazę stylistyczną.</p>
-            </div>
-          </article>
-
-          <article>
-            <span>03</span>
-            <div>
-              <h3>Projekt i wizualizacje</h3>
-              <p>Dopracowujemy materiały, kolory, zabudowy, oświetlenie i wizualny efekt końcowy.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact-section" id="kontakt">
-      <div class="contact-bg"></div>
-
-      <div class="contact-panel reveal">
+    <section class="cta-strip">
+      <div class="reveal">
         <p class="eyebrow">Kontakt</p>
-        <h2>Porozmawiajmy o Twoim wnętrzu.</h2>
-        <p>
-          Napisz, czego dotyczy projekt, jaki metraż obejmuje wnętrze i na jakim etapie jesteś.
-          Przygotujemy zakres współpracy dopasowany do Twoich potrzeb.
-        </p>
-
-        <div class="contact-grid">
-          <a href="tel:518394302">
-            <span>Telefon</span>
-            <strong>518 394 302</strong>
-          </a>
-
-          <a href="mailto:alicjachmiel.cosinteriors@gmail.com">
-            <span>E-mail</span>
-            <strong>alicjachmiel.cosinteriors@gmail.com</strong>
-          </a>
-
-          <a href="https://www.facebook.com/p/COS-interiors-100088112425953/" target="_blank" rel="noopener">
-            <span>Facebook</span>
-            <strong>COS interiors</strong>
-          </a>
-        </div>
+        <h2>Masz wnętrze do zaprojektowania?</h2>
+        <p>Wypełnij krótką ankietę — to najprostszy sposób, żeby zacząć rozmowę.</p>
       </div>
+      <a href="ankieta.html" class="btn btn-primary reveal">Wypełnij ankietę</a>
     </section>
   </main>
-
   <footer class="footer">
     <div class="footer-brand">
       <img src="logo-black.png" alt="COS interiors">
       <p>
         COS interiors projektuje mieszkania, domy, kuchnie, łazienki, salony i strefy dzienne.
-        Najważniejsze są dla nas spójny klimat, wygoda i dopracowane detale.
+        Spójny klimat, wygoda i dopracowane detale są podstawą każdego projektu.
       </p>
       <p class="footer-small">Projektowanie wnętrz, koncepcje, wizualizacje i konsultacje.</p>
     </div>
 
     <div class="footer-links">
-      <h4>Oferta</h4>
-      <a href="#oferta">Koncepcja wnętrza</a>
-      <a href="#oferta">Projekt kompleksowy</a>
-      <a href="#oferta">Wizualizacje</a>
-      <a href="#oferta">Konsultacje</a>
+      <h4>Menu</h4>
+      <a href="projekty.html">Projekty</a>
+      <a href="oferta.html">Oferta</a>
+      <a href="proces.html">Proces</a>
+      <a href="ankieta.html">Ankieta</a>
+      <a href="kontakt.html">Kontakt</a>
     </div>
 
     <div class="footer-contact">
       <h4>Kontakt</h4>
       <a href="tel:518394302">518 394 302</a>
       <a href="mailto:alicjachmiel.cosinteriors@gmail.com">alicjachmiel.cosinteriors@gmail.com</a>
+      <a href="https://www.instagram.com/cos_interiors/" target="_blank" rel="noopener">Instagram @cos_interiors</a>
       <a href="https://www.facebook.com/p/COS-interiors-100088112425953/" target="_blank" rel="noopener">Facebook COS interiors</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Olkusz%2032-300%20Poland" target="_blank" rel="noopener">Olkusz, Poland, 32-300</a>
     </div>
 
     <div class="footer-bottom">
       <p>© COS interiors. Projektowanie wnętrz.</p>
     </div>
   </footer>
-
-  <div class="lightbox" id="lightbox">
-    <button id="lightboxClose" aria-label="Zamknij">×</button>
-    <img src="" alt="" id="lightboxImage">
-  </div>
-
-  <script src="script.js"></script>
+  <script src="script.js?v=cos-pages-2"></script>
 </body>
 </html>
