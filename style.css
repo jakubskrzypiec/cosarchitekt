@@ -995,3 +995,107 @@ button,a{-webkit-tap-highlight-color:transparent}
     padding-top: 112px !important;
   }
 }
+
+
+/* --- v5 cleaner mobile menu: side aligned, less gimmick --- */
+@media (max-width: 980px) {
+  .site-header {
+    min-height: 70px !important;
+    background: rgba(255, 250, 244, 0.96) !important;
+    border-bottom: 1px solid rgba(93, 67, 47, 0.13) !important;
+    box-shadow: 0 10px 28px rgba(67, 46, 31, 0.07) !important;
+  }
+
+  .menu-toggle {
+    height: 70px !important;
+    padding: 0 14px !important;
+  }
+
+  .menu-toggle .menu-label {
+    justify-self: start !important;
+    font-family: Inter, sans-serif !important;
+    font-size: 12px !important;
+    letter-spacing: 0.20em !important;
+    color: var(--brown-dark) !important;
+  }
+
+  .menu-toggle .menu-close {
+    justify-self: end !important;
+    font-family: Inter, sans-serif !important;
+    font-size: 34px !important;
+    color: var(--brown-dark) !important;
+  }
+
+  .nav {
+    inset: 70px 0 0 0 !important;
+    height: calc(100svh - 70px) !important;
+    padding: 0 !important;
+    background: #fffaf4 !important;
+    border-top: 1px solid rgba(93, 67, 47, 0.08) !important;
+    counter-reset: none !important;
+  }
+
+  .nav a {
+    min-height: 82px !important;
+    padding: 0 14px !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    border-bottom: 1px solid rgba(93, 67, 47, 0.14) !important;
+    font-family: "Playfair Display", serif !important;
+    font-size: clamp(42px, 14vw, 68px) !important;
+    font-weight: 500 !important;
+    line-height: 0.92 !important;
+    letter-spacing: -0.065em !important;
+    color: var(--brown-dark) !important;
+    text-transform: none !important;
+  }
+
+  .nav a::before {
+    display: none !important;
+    content: none !important;
+  }
+
+  .nav a::after {
+    display: none !important;
+  }
+
+  .nav a:nth-child(even) {
+    justify-content: flex-end !important;
+    text-align: right !important;
+  }
+
+  .nav a.active {
+    color: var(--brown) !important;
+  }
+
+  .nav a:hover {
+    color: var(--brown) !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-header {
+    min-height: 66px !important;
+  }
+
+  .menu-toggle {
+    height: 66px !important;
+    padding: 0 12px !important;
+  }
+
+  .nav {
+    inset: 66px 0 0 0 !important;
+    height: calc(100svh - 66px) !important;
+  }
+
+  .nav a {
+    min-height: 74px !important;
+    padding: 0 12px !important;
+    font-size: clamp(39px, 15vw, 58px) !important;
+  }
+
+  .hero,
+  .page-hero {
+    padding-top: 104px !important;
+  }
+}
