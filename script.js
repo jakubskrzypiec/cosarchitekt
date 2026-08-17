@@ -1,30 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
-  const splash = document.querySelector(".splash-screen");
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  if (splash) {
-    if (prefersReducedMotion) {
-      splash.remove();
-    } else {
-      body.classList.add("is-splashing");
-
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          splash.classList.add("is-ready");
-        });
-      });
-
-      window.setTimeout(() => {
-        splash.classList.add("is-leaving");
-      }, 2450);
-
-      window.setTimeout(() => {
-        body.classList.remove("is-splashing");
-        splash.remove();
-      }, 3350);
-    }
-  }
 
   const revealElements = document.querySelectorAll(".reveal");
 
