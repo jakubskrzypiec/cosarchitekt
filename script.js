@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const updateHeader = () => {
       const currentScrollY = window.scrollY;
+      header.classList.toggle("is-scrolled", currentScrollY > 36);
       const scrollingDown = currentScrollY > lastScrollY;
       const farEnough = currentScrollY > 110;
 
@@ -42,6 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
       ticking = false;
     };
 
+    header.classList.toggle("is-scrolled", window.scrollY > 36);
+
     window.addEventListener("scroll", () => {
       if (!ticking) {
         window.requestAnimationFrame(updateHeader);
@@ -49,6 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }, { passive: true });
   }
+
+  document.querySelectorAll('input[name="_next"]').forEach((input) => {
+    input.value = new URL("dziekujemy.html", window.location.href).href;
+  });
 
   const toggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".nav");
