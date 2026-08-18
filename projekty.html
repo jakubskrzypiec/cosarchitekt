@@ -1,163 +1,76 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projekty | COS interiors</title>
-  <meta name="description" content="Wybrane projekty wnętrz COS interiors: salony, kuchnie, łazienki i pozostałe przestrzenie." />
-  <meta name="theme-color" content="#2f261f" />
-  <meta property="og:title" content="Projekty | COS interiors" />
-  <meta property="og:description" content="Wybrane projekty wnętrz COS interiors: salony, kuchnie, łazienki i pozostałe przestrzenie." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="hero.png" />
+  <meta name="description" content="Projekty i wizualizacje wnętrz COS interiors.">
+  <meta name="theme-color" content="#F7F5EF">
+  <meta property="og:title" content="Projekty | COS interiors">
+  <meta property="og:description" content="Projekty i wizualizacje wnętrz COS interiors.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="hero.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=cos-pages-8">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=cos-offwhite-1">
 </head>
-<body>
-  
-  <header class="site-header">
-    <a href="index.html" class="brand" aria-label="COS interiors">
-      <span class="brand-mark"><img src="logo-black.png" alt="COS interiors"></span>
-    </a>
-
-    <button class="menu-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false">
-      <span class="menu-bar menu-bar--1"></span>
-      <span class="menu-bar menu-bar--2"></span>
-      <span class="menu-bar menu-bar--3"></span>
-    </button>
-
-    <nav class="nav" aria-label="Menu główne">
-      <a class="" href="index.html">Start</a>
-      <a class="active" href="projekty.html">Projekty</a>
-      <a class="" href="oferta.html">Oferta</a>
-      <a class="" href="proces.html">Proces</a>
-      <a class="" href="ankieta.html">Ankieta</a>
-      <a class="" href="kontakt.html">Kontakt</a>
-    </nav>
-  </header>
-  <main>
-    <section class="page-hero">
-      <div>
-        <p class="eyebrow reveal">Projekty</p>
-        <h1 class="reveal">Wybrane przestrzenie COS interiors.</h1>
-        <p class="reveal">Duże kadry, konkretne pomieszczenia i galeria, którą można filtrować według typu wnętrza.</p>
-      </div>
-    </section>
-
-    <section class="section projects-showcase page-section">
-      <div class="featured-projects">
-        <article class="featured-card reveal">
-          <a href="oferta.html" class="featured-image" aria-label="Poznaj ofertę po obejrzeniu projektu salonu">
-            <img src="salon2.jfif" alt="Projekt salonu w ciepłej kolorystyce" loading="lazy">
-          </a>
-          <div class="featured-copy">
-            <span>Salon / strefa dzienna</span>
-            <h3>Ciepła przestrzeń do codziennego życia</h3>
-            <p>Miękkie formy, światło i naturalne faktury budują wnętrze, które jest eleganckie, ale nie chłodne.</p>
-            <a href="oferta.html">Poznaj ofertę</a>
-          </div>
-        </article>
-
-        <article class="featured-card featured-card-reverse reveal">
-          <a href="oferta.html" class="featured-image" aria-label="Poznaj ofertę po obejrzeniu projektu kuchni">
-            <img src="kuchnia.jfif" alt="Projekt kuchni z nowoczesną zabudową" loading="lazy">
-          </a>
-          <div class="featured-copy">
-            <span>Kuchnia / funkcja</span>
-            <h3>Układ, który dobrze wygląda i działa na co dzień</h3>
-            <p>W projekcie liczy się rytm zabudowy, wygoda przechowywania, światło i spójność z resztą mieszkania.</p>
-            <a href="oferta.html">Poznaj ofertę</a>
-          </div>
-        </article>
-
-        <article class="featured-card reveal">
-          <a href="oferta.html" class="featured-image" aria-label="Poznaj ofertę po obejrzeniu projektu łazienki">
-            <img src="lazienka.jfif" alt="Projekt łazienki w naturalnych odcieniach" loading="lazy">
-          </a>
-          <div class="featured-copy">
-            <span>Łazienka / materiały</span>
-            <h3>Spokój, proporcje i dopracowany detal</h3>
-            <p>Dobór materiałów i proporcji sprawia, że nawet niewielka przestrzeń może wyglądać lekko i konsekwentnie.</p>
-            <a href="oferta.html">Poznaj ofertę</a>
-          </div>
-        </article>
-      </div>
-
-      <div class="gallery-block">
-        <div class="gallery-head reveal">
-          <p class="eyebrow">Galeria</p>
-          <h3>Więcej kadrów z projektów</h3>
-        </div>
-
-        <div class="gallery-filters reveal">
-          <button class="filter-btn active" data-filter="all">Wszystkie</button>
-          <button class="filter-btn" data-filter="kuchnie">Kuchnie</button>
-          <button class="filter-btn" data-filter="lazienki">Łazienki</button>
-          <button class="filter-btn" data-filter="salony">Salony</button>
-          <button class="filter-btn" data-filter="pozostale">Pozostałe</button>
-        </div>
-
-        <div class="projects-grid">
-          <article class="project-card reveal" data-category="salony"><img src="salon2.jfif" alt="Projekt salonu" loading="lazy"><div><span>Salon</span><h3>Ciepła strefa dzienna</h3></div></article>
-          <article class="project-card reveal" data-category="kuchnie"><img src="kuchnia.jfif" alt="Projekt kuchni" loading="lazy"><div><span>Kuchnia</span><h3>Elegancja w prostych formach</h3></div></article>
-          <article class="project-card reveal" data-category="lazienki"><img src="lazienka.jfif" alt="Projekt łazienki" loading="lazy"><div><span>Łazienka</span><h3>Minimalizm i wygoda</h3></div></article>
-          <article class="project-card reveal" data-category="salony"><img src="kominek.jfif" alt="Projekt z kominkiem" loading="lazy"><div><span>Strefa dzienna</span><h3>Światło, faktury i spokój</h3></div></article>
-          <article class="project-card reveal" data-category="kuchnie"><img src="kuchnia2.jfif" alt="Projekt kuchni" loading="lazy"><div><span>Kuchnia</span><h3>Praktyczny układ na co dzień</h3></div></article>
-          <article class="project-card reveal" data-category="lazienki"><img src="lazienka2.jfif" alt="Projekt łazienki" loading="lazy"><div><span>Łazienka</span><h3>Spójne materiały i komfort</h3></div></article>
-          <article class="project-card reveal" data-category="salony"><img src="sofa.jfif" alt="Projekt sofy i salonu" loading="lazy"><div><span>Salon</span><h3>Miękka, przytulna przestrzeń</h3></div></article>
-          <article class="project-card reveal" data-category="kuchnie"><img src="kuchnia3.jfif" alt="Projekt kuchni" loading="lazy"><div><span>Kuchnia</span><h3>Nowoczesna zabudowa</h3></div></article>
-          <article class="project-card reveal" data-category="lazienki"><img src="lazienak3.jfif" alt="Projekt łazienki" loading="lazy"><div><span>Łazienka</span><h3>Czysta forma i ciepłe światło</h3></div></article>
-          <article class="project-card reveal" data-category="pozostale"><img src="sypialnia.jfif" alt="Projekt sypialni" loading="lazy"><div><span>Sypialnia</span><h3>Spokojna przestrzeń odpoczynku</h3></div></article>
-          <article class="project-card reveal" data-category="kuchnie"><img src="kuchniainna.jfif" alt="Projekt kuchni" loading="lazy"><div><span>Kuchnia</span><h3>Jasna zabudowa</h3></div></article>
-          <article class="project-card reveal" data-category="lazienki"><img src="lazienkainna.jfif" alt="Projekt łazienki" loading="lazy"><div><span>Łazienka</span><h3>Naturalne odcienie</h3></div></article>
-        </div>
-      </div>
-
-      <div class="project-cta reveal">
-        <h3>Podoba Ci się ten kierunek?</h3>
-        <p>Przejdź do oferty i sprawdź, jaki zakres współpracy będzie najlepszy dla Twojego wnętrza.</p>
-        <a href="oferta.html" class="btn btn-primary">Poznaj ofertę</a>
-      </div>
-    </section>
-    <div class="lightbox" id="lightbox">
-    <button id="lightboxClose" aria-label="Zamknij">×</button>
-    <img src="" alt="" id="lightboxImage">
+<body data-page="projekty">
+<header class="site-header">
+  <a href="index.html" class="brand" aria-label="COS interiors"><img src="logo.png" alt="COS interiors"></a>
+  <button class="menu-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false"><span></span><span></span></button>
+  <nav class="nav" aria-label="Menu główne">
+    <a href="index.html" data-page="index">Start</a>
+    <a href="projekty.html" data-page="projekty">Projekty</a>
+    <a href="oferta.html" data-page="oferta">Oferta</a>
+    <a href="ankieta.html" data-page="ankieta">Ankieta</a>
+    <a href="kontakt.html" data-page="kontakt">Kontakt</a>
+  </nav>
+</header>
+<main>
+  <section class="simple-hero"><h1 class="reveal">PROJEKTY</h1></section>
+  <div class="projects-page"><section class="project-case" id="projekt-1" data-project-section="projekt-1">
+      <div class="project-case-head reveal"><span>01</span><h2>Warszawa / Majdan</h2></div>
+      <div class="case-grid"><button class="gallery-item reveal" type="button" data-gallery="projekt-1" data-src="projekt-01-01.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Majdan"><img src="projekt-01-01.webp" alt="Warszawa / Majdan — wizualizacja 1" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-1" data-src="projekt-01-02.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Majdan"><img src="projekt-01-02.webp" alt="Warszawa / Majdan — wizualizacja 2" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-1" data-src="projekt-01-03.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Majdan"><img src="projekt-01-03.webp" alt="Warszawa / Majdan — wizualizacja 3" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-1" data-src="projekt-01-04.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Majdan"><img src="projekt-01-04.webp" alt="Warszawa / Majdan — wizualizacja 4" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-1" data-src="projekt-01-05.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Majdan"><img src="projekt-01-05.webp" alt="Warszawa / Majdan — wizualizacja 5" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-1" data-src="projekt-01-06.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Majdan"><img src="projekt-01-06.webp" alt="Warszawa / Majdan — wizualizacja 6" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-1" data-src="projekt-01-07.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Majdan"><img src="projekt-01-07.webp" alt="Warszawa / Majdan — wizualizacja 7" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-1" data-src="projekt-01-08.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Majdan"><img src="projekt-01-08.webp" alt="Warszawa / Majdan — wizualizacja 8" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-1" data-src="projekt-01-09.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Majdan"><img src="projekt-01-09.webp" alt="Warszawa / Majdan — wizualizacja 9" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-1" data-src="projekt-01-10.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Majdan"><img src="projekt-01-10.webp" alt="Warszawa / Majdan — wizualizacja 10" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-1" data-src="projekt-01-11.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Majdan"><img src="projekt-01-11.webp" alt="Warszawa / Majdan — wizualizacja 11" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-1" data-src="projekt-01-12.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Majdan"><img src="projekt-01-12.webp" alt="Warszawa / Majdan — wizualizacja 12" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-1" data-src="projekt-01-13.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Majdan"><img src="projekt-01-13.webp" alt="Warszawa / Majdan — wizualizacja 13" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-1" data-src="projekt-01-14.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Majdan"><img src="projekt-01-14.webp" alt="Warszawa / Majdan — wizualizacja 14" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-1" data-src="projekt-01-15.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Majdan"><img src="projekt-01-15.webp" alt="Warszawa / Majdan — wizualizacja 15" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-1" data-src="projekt-01-16.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Majdan"><img src="projekt-01-16.webp" alt="Warszawa / Majdan — wizualizacja 16" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-1" data-src="projekt-01-17.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Majdan"><img src="projekt-01-17.webp" alt="Warszawa / Majdan — wizualizacja 17" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-1" data-src="projekt-01-18.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Majdan"><img src="projekt-01-18.webp" alt="Warszawa / Majdan — wizualizacja 18" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-1" data-src="projekt-01-19.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Majdan"><img src="projekt-01-19.webp" alt="Warszawa / Majdan — wizualizacja 19" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-1" data-src="projekt-01-20.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Majdan"><img src="projekt-01-20.webp" alt="Warszawa / Majdan — wizualizacja 20" loading="lazy"></button></div>
+      <button class="show-project btn btn-outline" type="button" data-project="projekt-1">Zobacz cały projekt (20)</button>
+    </section><section class="project-case" id="projekt-2" data-project-section="projekt-2">
+      <div class="project-case-head reveal"><span>02</span><h2>Olkusz</h2></div>
+      <div class="case-grid"><button class="gallery-item reveal" type="button" data-gallery="projekt-2" data-src="projekt-02-01.webp" aria-label="Otwórz zdjęcie projektu Olkusz"><img src="projekt-02-01.webp" alt="Olkusz — wizualizacja 1" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-2" data-src="projekt-02-02.webp" aria-label="Otwórz zdjęcie projektu Olkusz"><img src="projekt-02-02.webp" alt="Olkusz — wizualizacja 2" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-2" data-src="projekt-02-03.webp" aria-label="Otwórz zdjęcie projektu Olkusz"><img src="projekt-02-03.webp" alt="Olkusz — wizualizacja 3" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-2" data-src="projekt-02-04.webp" aria-label="Otwórz zdjęcie projektu Olkusz"><img src="projekt-02-04.webp" alt="Olkusz — wizualizacja 4" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-2" data-src="projekt-02-05.webp" aria-label="Otwórz zdjęcie projektu Olkusz"><img src="projekt-02-05.webp" alt="Olkusz — wizualizacja 5" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-2" data-src="projekt-02-06.webp" aria-label="Otwórz zdjęcie projektu Olkusz"><img src="projekt-02-06.webp" alt="Olkusz — wizualizacja 6" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-2" data-src="projekt-02-07.webp" aria-label="Otwórz zdjęcie projektu Olkusz"><img src="projekt-02-07.webp" alt="Olkusz — wizualizacja 7" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-2" data-src="projekt-02-08.webp" aria-label="Otwórz zdjęcie projektu Olkusz"><img src="projekt-02-08.webp" alt="Olkusz — wizualizacja 8" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-2" data-src="projekt-02-09.webp" aria-label="Otwórz zdjęcie projektu Olkusz"><img src="projekt-02-09.webp" alt="Olkusz — wizualizacja 9" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-2" data-src="projekt-02-10.webp" aria-label="Otwórz zdjęcie projektu Olkusz"><img src="projekt-02-10.webp" alt="Olkusz — wizualizacja 10" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-2" data-src="projekt-02-11.webp" aria-label="Otwórz zdjęcie projektu Olkusz"><img src="projekt-02-11.webp" alt="Olkusz — wizualizacja 11" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-2" data-src="projekt-02-12.webp" aria-label="Otwórz zdjęcie projektu Olkusz"><img src="projekt-02-12.webp" alt="Olkusz — wizualizacja 12" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-2" data-src="projekt-02-13.webp" aria-label="Otwórz zdjęcie projektu Olkusz"><img src="projekt-02-13.webp" alt="Olkusz — wizualizacja 13" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-2" data-src="projekt-02-14.webp" aria-label="Otwórz zdjęcie projektu Olkusz"><img src="projekt-02-14.webp" alt="Olkusz — wizualizacja 14" loading="lazy"></button></div>
+      <button class="show-project btn btn-outline" type="button" data-project="projekt-2">Zobacz cały projekt (14)</button>
+    </section><section class="project-case" id="projekt-3" data-project-section="projekt-3">
+      <div class="project-case-head reveal"><span>03</span><h2>Cieszyn</h2></div>
+      <div class="case-grid"><button class="gallery-item reveal" type="button" data-gallery="projekt-3" data-src="projekt-03-01.webp" aria-label="Otwórz zdjęcie projektu Cieszyn"><img src="projekt-03-01.webp" alt="Cieszyn — wizualizacja 1" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-3" data-src="projekt-03-02.webp" aria-label="Otwórz zdjęcie projektu Cieszyn"><img src="projekt-03-02.webp" alt="Cieszyn — wizualizacja 2" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-3" data-src="projekt-03-03.webp" aria-label="Otwórz zdjęcie projektu Cieszyn"><img src="projekt-03-03.webp" alt="Cieszyn — wizualizacja 3" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-3" data-src="projekt-03-04.webp" aria-label="Otwórz zdjęcie projektu Cieszyn"><img src="projekt-03-04.webp" alt="Cieszyn — wizualizacja 4" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-3" data-src="projekt-03-05.webp" aria-label="Otwórz zdjęcie projektu Cieszyn"><img src="projekt-03-05.webp" alt="Cieszyn — wizualizacja 5" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-3" data-src="projekt-03-06.webp" aria-label="Otwórz zdjęcie projektu Cieszyn"><img src="projekt-03-06.webp" alt="Cieszyn — wizualizacja 6" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-3" data-src="projekt-03-07.webp" aria-label="Otwórz zdjęcie projektu Cieszyn"><img src="projekt-03-07.webp" alt="Cieszyn — wizualizacja 7" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-3" data-src="projekt-03-08.webp" aria-label="Otwórz zdjęcie projektu Cieszyn"><img src="projekt-03-08.webp" alt="Cieszyn — wizualizacja 8" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-3" data-src="projekt-03-09.webp" aria-label="Otwórz zdjęcie projektu Cieszyn"><img src="projekt-03-09.webp" alt="Cieszyn — wizualizacja 9" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-3" data-src="projekt-03-10.webp" aria-label="Otwórz zdjęcie projektu Cieszyn"><img src="projekt-03-10.webp" alt="Cieszyn — wizualizacja 10" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-3" data-src="projekt-03-11.webp" aria-label="Otwórz zdjęcie projektu Cieszyn"><img src="projekt-03-11.webp" alt="Cieszyn — wizualizacja 11" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-3" data-src="projekt-03-12.webp" aria-label="Otwórz zdjęcie projektu Cieszyn"><img src="projekt-03-12.webp" alt="Cieszyn — wizualizacja 12" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-3" data-src="projekt-03-13.webp" aria-label="Otwórz zdjęcie projektu Cieszyn"><img src="projekt-03-13.webp" alt="Cieszyn — wizualizacja 13" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-3" data-src="projekt-03-14.webp" aria-label="Otwórz zdjęcie projektu Cieszyn"><img src="projekt-03-14.webp" alt="Cieszyn — wizualizacja 14" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-3" data-src="projekt-03-15.webp" aria-label="Otwórz zdjęcie projektu Cieszyn"><img src="projekt-03-15.webp" alt="Cieszyn — wizualizacja 15" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-3" data-src="projekt-03-16.webp" aria-label="Otwórz zdjęcie projektu Cieszyn"><img src="projekt-03-16.webp" alt="Cieszyn — wizualizacja 16" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-3" data-src="projekt-03-17.webp" aria-label="Otwórz zdjęcie projektu Cieszyn"><img src="projekt-03-17.webp" alt="Cieszyn — wizualizacja 17" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-3" data-src="projekt-03-18.webp" aria-label="Otwórz zdjęcie projektu Cieszyn"><img src="projekt-03-18.webp" alt="Cieszyn — wizualizacja 18" loading="lazy"></button></div>
+      <button class="show-project btn btn-outline" type="button" data-project="projekt-3">Zobacz cały projekt (18)</button>
+    </section><section class="project-case" id="projekt-4" data-project-section="projekt-4">
+      <div class="project-case-head reveal"><span>04</span><h2>Warszawa / Żelazna</h2></div>
+      <div class="case-grid"><button class="gallery-item reveal" type="button" data-gallery="projekt-4" data-src="projekt-04-01.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Żelazna"><img src="projekt-04-01.webp" alt="Warszawa / Żelazna — wizualizacja 1" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-4" data-src="projekt-04-02.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Żelazna"><img src="projekt-04-02.webp" alt="Warszawa / Żelazna — wizualizacja 2" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-4" data-src="projekt-04-03.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Żelazna"><img src="projekt-04-03.webp" alt="Warszawa / Żelazna — wizualizacja 3" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-4" data-src="projekt-04-04.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Żelazna"><img src="projekt-04-04.webp" alt="Warszawa / Żelazna — wizualizacja 4" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-4" data-src="projekt-04-05.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Żelazna"><img src="projekt-04-05.webp" alt="Warszawa / Żelazna — wizualizacja 5" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-4" data-src="projekt-04-06.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Żelazna"><img src="projekt-04-06.webp" alt="Warszawa / Żelazna — wizualizacja 6" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-4" data-src="projekt-04-07.webp" aria-label="Otwórz zdjęcie projektu Warszawa / Żelazna"><img src="projekt-04-07.webp" alt="Warszawa / Żelazna — wizualizacja 7" loading="lazy"></button></div>
+      <button class="show-project btn btn-outline" type="button" data-project="projekt-4">Zobacz cały projekt (7)</button>
+    </section><section class="project-case" id="projekt-5" data-project-section="projekt-5">
+      <div class="project-case-head reveal"><span>05</span><h2>Dąbrowa</h2></div>
+      <div class="case-grid"><button class="gallery-item reveal" type="button" data-gallery="projekt-5" data-src="projekt-05-01.webp" aria-label="Otwórz zdjęcie projektu Dąbrowa"><img src="projekt-05-01.webp" alt="Dąbrowa — wizualizacja 1" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-5" data-src="projekt-05-02.webp" aria-label="Otwórz zdjęcie projektu Dąbrowa"><img src="projekt-05-02.webp" alt="Dąbrowa — wizualizacja 2" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-5" data-src="projekt-05-03.webp" aria-label="Otwórz zdjęcie projektu Dąbrowa"><img src="projekt-05-03.webp" alt="Dąbrowa — wizualizacja 3" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-5" data-src="projekt-05-04.webp" aria-label="Otwórz zdjęcie projektu Dąbrowa"><img src="projekt-05-04.webp" alt="Dąbrowa — wizualizacja 4" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-5" data-src="projekt-05-05.webp" aria-label="Otwórz zdjęcie projektu Dąbrowa"><img src="projekt-05-05.webp" alt="Dąbrowa — wizualizacja 5" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-5" data-src="projekt-05-06.webp" aria-label="Otwórz zdjęcie projektu Dąbrowa"><img src="projekt-05-06.webp" alt="Dąbrowa — wizualizacja 6" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-5" data-src="projekt-05-07.webp" aria-label="Otwórz zdjęcie projektu Dąbrowa"><img src="projekt-05-07.webp" alt="Dąbrowa — wizualizacja 7" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-5" data-src="projekt-05-08.webp" aria-label="Otwórz zdjęcie projektu Dąbrowa"><img src="projekt-05-08.webp" alt="Dąbrowa — wizualizacja 8" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-5" data-src="projekt-05-09.webp" aria-label="Otwórz zdjęcie projektu Dąbrowa"><img src="projekt-05-09.webp" alt="Dąbrowa — wizualizacja 9" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-5" data-src="projekt-05-10.webp" aria-label="Otwórz zdjęcie projektu Dąbrowa"><img src="projekt-05-10.webp" alt="Dąbrowa — wizualizacja 10" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-5" data-src="projekt-05-11.webp" aria-label="Otwórz zdjęcie projektu Dąbrowa"><img src="projekt-05-11.webp" alt="Dąbrowa — wizualizacja 11" loading="lazy"></button></div>
+      <button class="show-project btn btn-outline" type="button" data-project="projekt-5">Zobacz cały projekt (11)</button>
+    </section><section class="project-case" id="projekt-6" data-project-section="projekt-6">
+      <div class="project-case-head reveal"><span>06</span><h2>BIEMA</h2></div>
+      <div class="case-grid"><button class="gallery-item reveal" type="button" data-gallery="projekt-6" data-src="projekt-06-01.webp" aria-label="Otwórz zdjęcie projektu BIEMA"><img src="projekt-06-01.webp" alt="BIEMA — wizualizacja 1" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-6" data-src="projekt-06-02.webp" aria-label="Otwórz zdjęcie projektu BIEMA"><img src="projekt-06-02.webp" alt="BIEMA — wizualizacja 2" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-6" data-src="projekt-06-03.webp" aria-label="Otwórz zdjęcie projektu BIEMA"><img src="projekt-06-03.webp" alt="BIEMA — wizualizacja 3" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-6" data-src="projekt-06-04.webp" aria-label="Otwórz zdjęcie projektu BIEMA"><img src="projekt-06-04.webp" alt="BIEMA — wizualizacja 4" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-6" data-src="projekt-06-05.webp" aria-label="Otwórz zdjęcie projektu BIEMA"><img src="projekt-06-05.webp" alt="BIEMA — wizualizacja 5" loading="lazy"></button><button class="gallery-item reveal" type="button" data-gallery="projekt-6" data-src="projekt-06-06.webp" aria-label="Otwórz zdjęcie projektu BIEMA"><img src="projekt-06-06.webp" alt="BIEMA — wizualizacja 6" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-6" data-src="projekt-06-07.webp" aria-label="Otwórz zdjęcie projektu BIEMA"><img src="projekt-06-07.webp" alt="BIEMA — wizualizacja 7" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-6" data-src="projekt-06-08.webp" aria-label="Otwórz zdjęcie projektu BIEMA"><img src="projekt-06-08.webp" alt="BIEMA — wizualizacja 8" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-6" data-src="projekt-06-09.webp" aria-label="Otwórz zdjęcie projektu BIEMA"><img src="projekt-06-09.webp" alt="BIEMA — wizualizacja 9" loading="lazy"></button><button class="gallery-item reveal project-extra" type="button" data-gallery="projekt-6" data-src="projekt-06-10.webp" aria-label="Otwórz zdjęcie projektu BIEMA"><img src="projekt-06-10.webp" alt="BIEMA — wizualizacja 10" loading="lazy"></button></div>
+      <button class="show-project btn btn-outline" type="button" data-project="projekt-6">Zobacz cały projekt (10)</button>
+    </section></div>
+  <section class="project-cta">
+    <h2 class="reveal">Widzisz się w takim wnętrzu?</h2>
+    <div class="cta-actions reveal"><a href="oferta.html" class="btn btn-dark">Poznaj ofertę</a><span>lub</span><a href="ankieta.html" class="btn btn-outline">Wypełnij formularz</a></div>
+  </section>
+</main>
+<div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" id="lightboxClose" aria-label="Zamknij">×</button><button class="lightbox-prev" id="lightboxPrev" aria-label="Poprzednie">←</button><img id="lightboxImage" src="" alt=""><button class="lightbox-next" id="lightboxNext" aria-label="Następne">→</button></div>
+<footer class="footer">
+  <div class="footer-logo"><img src="logo.png" alt="COS interiors"></div>
+  <div class="footer-nav">
+    <a href="projekty.html">Projekty</a><a href="oferta.html">Oferta</a><a href="ankieta.html">Ankieta</a><a href="kontakt.html">Kontakt</a>
   </div>
-  </main>
-  <footer class="footer">
-    <div class="footer-brand">
-      <img src="logo-black.png" alt="COS interiors">
-      <p>
-        COS interiors projektuje mieszkania, domy, kuchnie, łazienki, salony i strefy dzienne.
-        Spójny klimat, wygoda i dopracowane detale są podstawą każdego projektu.
-      </p>
-      <p class="footer-small">Projektowanie wnętrz, koncepcje, wizualizacje i konsultacje.</p>
-    </div>
-
-    <div class="footer-links">
-      <h4>Menu</h4>
-      <a href="projekty.html">Projekty</a>
-      <a href="oferta.html">Oferta</a>
-      <a href="proces.html">Proces</a>
-      <a href="ankieta.html">Ankieta</a>
-      <a href="kontakt.html">Kontakt</a>
-    </div>
-
-    <div class="footer-contact">
-      <h4>Kontakt</h4>
-      <a href="tel:518394302">518 394 302</a>
-      <a href="mailto:alicjachmiel.cosinteriors@gmail.com">alicjachmiel.cosinteriors@gmail.com</a>
-      <a href="https://www.instagram.com/cos_interiors/" target="_blank" rel="noopener">Instagram @cos_interiors</a>
-      <a href="https://www.facebook.com/p/COS-interiors-100088112425953/" target="_blank" rel="noopener">Facebook COS interiors</a>
-      <a href="https://www.google.com/maps/search/?api=1&query=Olkusz%2032-300%20Poland" target="_blank" rel="noopener">Olkusz, Poland, 32-300</a>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© COS interiors. Projektowanie wnętrz.</p>
-    </div>
-  </footer>
-  <script src="script.js?v=cos-pages-8"></script>
-</body>
-</html>
+  <div class="footer-contact">
+    <a href="tel:518394302">518 394 302</a>
+    <a href="mailto:alicjachmiel.cosinteriors@gmail.com">alicjachmiel.cosinteriors@gmail.com</a>
+    <a href="https://www.instagram.com/cos_interiors/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+  <p class="copyright">© COS interiors</p>
+</footer>
+<script src="script.js?v=cos-offwhite-1"></script>
+</body></html>
