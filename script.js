@@ -1,6 +1,11 @@
 
 document.addEventListener('DOMContentLoaded',()=>{
   const body=document.body;
+  const intro=document.getElementById('siteIntro');
+  if(intro){
+    const hideIntro=()=>{intro.classList.add('is-hidden');body.classList.remove('intro-active');setTimeout(()=>intro.remove(),650)};
+    if(sessionStorage.getItem('cosIntroSeen')){hideIntro()}else{sessionStorage.setItem('cosIntroSeen','1');setTimeout(hideIntro,1150)}
+  }
   const page=body.dataset.page;
   document.querySelectorAll('.nav a').forEach(a=>{if(a.dataset.page===page)a.classList.add('active')});
   const toggle=document.querySelector('.menu-toggle');
