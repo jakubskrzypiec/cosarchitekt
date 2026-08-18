@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COS interiors | Projektowanie wnętrz</title>
-  <meta name="description" content="COS interiors — projekty wnętrz, projekt koncepcyjny, projekt kompleksowy i nadzór autorski.">
-  <meta name="theme-color" content="#F7F5EF">
+  <meta name="description" content="COS interiors — wnętrza projektowane od potrzeb, przez funkcję i detal.">
+  <meta name="theme-color" content="#EDE7DB">
   <meta property="og:title" content="COS interiors | Projektowanie wnętrz">
-  <meta property="og:description" content="COS interiors — projekty wnętrz, projekt koncepcyjny, projekt kompleksowy i nadzór autorski.">
+  <meta property="og:description" content="COS interiors — wnętrza projektowane od potrzeb, przez funkcję i detal.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="hero.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=cos-offwhite-1">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=cos-funnel-v3">
 </head>
 <body data-page="index">
 <header class="site-header">
@@ -32,26 +32,76 @@
     <img class="hero-image" src="hero.webp" alt="Jasne, nowoczesne wnętrze COS interiors">
     <div class="hero-overlay"></div>
     <div class="hero-copy reveal">
-      <h1>DOM ZACZYNA SIĘ OD CIEBIE.</h1>
-      <p>Opowiedz mi, jak chcesz w nim żyć.</p>
+      <p class="hero-kicker">COS INTERIORS / PROJEKTOWANIE WNĘTRZ</p>
+      <h1>DOM ZACZYNA SIĘ<br>OD CIEBIE.</h1>
+      <p class="hero-sub">Opowiedz mi, jak chcesz w nim żyć.</p>
+      <div class="hero-actions">
+        <a href="ankieta.html" class="btn btn-mahogany">Wypełnij ankietę</a>
+        <a href="projekty.html" class="btn btn-moss">Zobacz projekty</a>
+      </div>
+      <a href="oferta.html" class="hero-offer-link">Poznaj ofertę <span>↗</span></a>
+    </div>
+    <div class="hero-social-card reveal">
+      <span>Znajdź COS</span>
+      <a href="https://www.instagram.com/cos_interiors/" target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="https://www.facebook.com/p/COS-interiors-100088112425953/" target="_blank" rel="noopener">Facebook ↗</a>
+      <a href="mailto:alicjachmiel.cosinteriors@gmail.com">E-mail ↗</a>
+    </div>
+    <a class="hero-scroll" href="#sciezka" aria-label="Przejdź niżej">Przewiń <span>↓</span></a>
+  </section>
+
+  <section class="funnel-strip" id="sciezka">
+    <div class="funnel-intro reveal"><span>Jak zaczynamy?</span><h2>Od inspiracji do konkretnego planu.</h2></div>
+    <div class="funnel-steps">
+      <a href="projekty.html" class="funnel-step reveal"><span>01</span><strong>Zobacz projekty</strong><small>Sprawdź kierunek i estetykę.</small><b>↗</b></a>
+      <a href="oferta.html" class="funnel-step reveal"><span>02</span><strong>Poznaj zakres</strong><small>Wybierz sposób współpracy.</small><b>↗</b></a>
+      <a href="ankieta.html" class="funnel-step reveal"><span>03</span><strong>Opowiedz o wnętrzu</strong><small>Wypełnij ankietę i zacznijmy rozmowę.</small><b>↗</b></a>
     </div>
   </section>
 
-  <section class="home-projects section-space">
-    <div class="mega-title reveal"><h2>PROJEKTY</h2><a href="projekty.html" class="text-link">Zobacz wszystkie <span>↗</span></a></div>
-    <div class="project-preview-grid">
-      <a class="preview-card preview-tall reveal" href="projekty.html#projekt-2"><img src="projekt-02-02.webp" alt="Projekt wnętrza Olkusz"></a>
-      <a class="preview-card reveal" href="projekty.html#projekt-3"><img src="projekt-03-07.webp" alt="Projekt wnętrza Cieszyn"></a>
-      <a class="preview-card reveal" href="projekty.html#projekt-4"><img src="projekt-04-03.webp" alt="Projekt wnętrza Warszawa"></a>
+  <section class="home-projects section-space decorated-section">
+    <span class="decor-orbit orbit-a" aria-hidden="true"></span>
+    <div class="section-heading-row reveal">
+      <div><p class="eyebrow">Wybrane realizacje</p><h2>PROJEKTY</h2></div>
+      <div class="section-side-copy"><p>Trzy różne wnętrza, jeden punkt wyjścia: codzienność osób, które będą w nich żyć.</p><a href="projekty.html" class="btn btn-line">Wszystkie projekty</a></div>
+    </div>
+    <div class="project-preview-list">
+      <article class="preview-project reveal">
+        <button class="preview-visual gallery-item" type="button" data-gallery="home-olkusz" data-src="projekt-02-02.webp"><img src="projekt-02-02.webp" alt="Olkusz — wizualizacja wnętrza"><span class="visual-hover">Powiększ ↗</span></button>
+        <div class="preview-info"><span>01 / Olkusz</span><h3>Miękkie światło, naturalne materiały i spokojna funkcja.</h3><a href="projekty.html#projekt-2" class="text-link">Zobacz projekt <b>↗</b></a></div>
+      </article>
+      <article class="preview-project reverse reveal">
+        <button class="preview-visual gallery-item" type="button" data-gallery="home-cieszyn" data-src="projekt-03-07.webp"><img src="projekt-03-07.webp" alt="Cieszyn — wizualizacja wnętrza"><span class="visual-hover">Powiększ ↗</span></button>
+        <div class="preview-info"><span>02 / Cieszyn</span><h3>Kontrast prostych form, światła i detalu.</h3><a href="projekty.html#projekt-3" class="text-link">Zobacz projekt <b>↗</b></a></div>
+      </article>
+      <article class="preview-project reveal">
+        <button class="preview-visual gallery-item" type="button" data-gallery="home-warszawa" data-src="projekt-04-03.webp"><img src="projekt-04-03.webp" alt="Warszawa Żelazna — wizualizacja wnętrza"><span class="visual-hover">Powiększ ↗</span></button>
+        <div class="preview-info"><span>03 / Warszawa</span><h3>Miejska funkcjonalność ubrana w spokojną paletę.</h3><a href="projekty.html#projekt-4" class="text-link">Zobacz projekt <b>↗</b></a></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="about-section decorated-section">
+    <span class="decor-orbit orbit-b" aria-hidden="true"></span>
+    <div class="about-visual reveal"><img src="projekt-02-06.webp" alt="Detal projektu COS interiors"></div>
+    <div class="about-copy reveal">
+      <p class="eyebrow">O mnie / COS interiors</p>
+      <h2>Wnętrze ma pasować do życia, nie odwrotnie.</h2>
+      <p>Pracę nad projektem zaczynam od rozmowy o codzienności, potrzebach i tym, co ma dawać Ci dom. Dopiero później układamy funkcję, materiały, światło i detal w jedną spójną całość.</p>
+      <div class="about-points"><span>Funkcja</span><span>Materiały</span><span>Detal</span></div>
+      <a href="ankieta.html" class="btn btn-mahogany">Opowiedz o swoim wnętrzu</a>
     </div>
   </section>
 
   <section class="home-offer section-space">
-    <div class="mega-title reveal"><h2>OFERTA</h2><a href="oferta.html" class="text-link">Pełny zakres <span>↗</span></a></div>
+    <div class="section-heading-row reveal">
+      <div><p class="eyebrow">Zakres współpracy</p><h2>OFERTA</h2></div>
+      <div class="section-side-copy"><p>Wybierz poziom wsparcia dopasowany do etapu inwestycji.</p><a href="oferta.html" class="btn btn-line">Pełna oferta</a></div>
+    </div>
     <div class="offer-three">
-      <a href="oferta.html#koncepcyjny" class="offer-tile reveal"><span>01</span><h3>PROJEKT<br>KONCEPCYJNY</h3><p>od 179 zł/m²</p><b>↗</b></a>
-      <a href="oferta.html#kompleksowy" class="offer-tile reveal"><span>02</span><h3>PROJEKT<br>KOMPLEKSOWY</h3><p>od 289 zł/m²</p><b>↗</b></a>
-      <a href="oferta.html#nadzor" class="offer-tile reveal"><span>03</span><h3>NADZÓR<br>AUTORSKI</h3><p>wycena indywidualna</p><b>↗</b></a>
+      <a href="oferta.html#koncepcyjny" class="offer-tile reveal"><span>01</span><h3>PROJEKT<br>KONCEPCYJNY</h3><p>Układ, model 3D, wizualizacje i zestawienie wyposażenia.</p><b>↗</b></a>
+      <a href="oferta.html#kompleksowy" class="offer-tile reveal"><span>02</span><h3>PROJEKT<br>KOMPLEKSOWY</h3><p>Pełny projekt wraz z dokumentacją techniczną.</p><b>↗</b></a>
+      <a href="oferta.html#nadzor" class="offer-tile reveal"><span>03</span><h3>NADZÓR<br>AUTORSKI</h3><p>Rozszerzenie projektu kompleksowego ustalane indywidualnie.</p><b>↗</b></a>
     </div>
   </section>
 
@@ -61,8 +111,7 @@
       <h2>Nie wiesz, który pakiet rozwiąże Twoje wyzwania?</h2>
       <p>Wypełnij formularz i otrzymaj indywidualną ofertę.</p>
     </div>
-    
-<form class="form form-compact reveal" action="https://formsubmit.co/alicjachmiel.cosinteriors@gmail.com" method="POST">
+    <form class="form form-compact reveal" action="https://formsubmit.co/alicjachmiel.cosinteriors@gmail.com" method="POST">
   <input type="hidden" name="_subject" value="Nowe zapytanie ze strony COS interiors">
   <input type="hidden" name="_template" value="table">
   <input type="hidden" name="_captcha" value="false">
@@ -73,10 +122,16 @@
   <label><span>Metraż</span><input type="text" name="Metraż" placeholder="np. 72 m²"></label>
   <label class="full"><span>Jaki zakres Cię interesuje?</span><select name="Zakres"><option value="">Wybierz</option><option>Projekt koncepcyjny</option><option>Projekt kompleksowy</option><option>Nadzór autorski</option><option>Nie wiem — proszę o podpowiedź</option></select></label>
   <label class="full"><span>Opowiedz krótko o wnętrzu</span><textarea name="Wiadomość" rows="4"></textarea></label>
-  <button class="btn btn-dark full" type="submit">Wyślij formularz</button>
+  <button class="btn btn-mahogany full" type="submit">Wyślij formularz</button>
 </form>
   </section>
 </main>
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Zamknij">×</button>
+  <button class="lightbox-prev" id="lightboxPrev" aria-label="Poprzednie">←</button>
+  <img id="lightboxImage" src="" alt="">
+  <button class="lightbox-next" id="lightboxNext" aria-label="Następne">→</button>
+</div>
 <footer class="footer">
   <div class="footer-logo"><img src="logo.png" alt="COS interiors"></div>
   <div class="footer-nav">
@@ -86,8 +141,9 @@
     <a href="tel:518394302">518 394 302</a>
     <a href="mailto:alicjachmiel.cosinteriors@gmail.com">alicjachmiel.cosinteriors@gmail.com</a>
     <a href="https://www.instagram.com/cos_interiors/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.facebook.com/p/COS-interiors-100088112425953/" target="_blank" rel="noopener">Facebook</a>
   </div>
   <p class="copyright">© COS interiors</p>
 </footer>
-<script src="script.js?v=cos-offwhite-1"></script>
+<script src="script.js?v=cos-funnel-v3"></script>
 </body></html>

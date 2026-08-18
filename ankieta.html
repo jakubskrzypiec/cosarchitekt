@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ankieta | COS interiors</title>
   <meta name="description" content="Ankieta projektowa COS interiors — opowiedz o swoim wnętrzu i otrzymaj indywidualną ofertę.">
-  <meta name="theme-color" content="#F7F5EF">
+  <meta name="theme-color" content="#EDE7DB">
   <meta property="og:title" content="Ankieta | COS interiors">
   <meta property="og:description" content="Ankieta projektowa COS interiors — opowiedz o swoim wnętrzu i otrzymaj indywidualną ofertę.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="hero.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=cos-offwhite-1">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=cos-funnel-v3">
 </head>
 <body data-page="ankieta">
 <header class="site-header">
@@ -28,24 +28,35 @@
   </nav>
 </header>
 <main>
-  <section class="simple-hero"><h1 class="reveal">ANKIETA</h1></section>
-  <section class="questionnaire-page">
-    <div class="questionnaire-intro reveal"><h2>Chcesz stworzyć z nami DOM?</h2><p>Potrzebujesz pomocy z doborem pakietu?<br>Zastanawiasz się nad współpracą?</p><p>Daj nam znać, jak możemy Ci pomóc!<br>Wypełnij ankietę i otrzymaj indywidualną ofertę.</p></div>
-    <form class="form questionnaire-form reveal" action="https://formsubmit.co/alicjachmiel.cosinteriors@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="Nowa ankieta ze strony COS interiors">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" class="form-next" value="">
-      <label><span>Imię i nazwisko</span><input type="text" name="Imię i nazwisko" required></label>
-      <label><span>E-mail</span><input type="email" name="E-mail" required></label>
-      <label><span>Telefon</span><input type="tel" name="Telefon" required></label>
-      <label><span>Metraż wnętrza</span><input type="text" name="Metraż" placeholder="np. 62 m²"></label>
-      <label><span>Lokalizacja inwestycji</span><input type="text" name="Lokalizacja" placeholder="np. Olkusz / Kraków / Warszawa"></label>
-      <label><span>Kiedy chcesz zacząć?</span><select name="Termin"><option value="">Wybierz termin</option><option>Jak najszybciej</option><option>W ciągu 1–3 miesięcy</option><option>W ciągu 3–6 miesięcy</option><option>Jeszcze nie wiem</option></select></label>
-      <label class="full"><span>Jaki zakres Cię interesuje?</span><select name="Zakres"><option value="">Wybierz zakres</option><option>Projekt koncepcyjny</option><option>Projekt kompleksowy</option><option>Nadzór autorski</option><option>Nie wiem — proszę o podpowiedź</option></select></label>
-      <label class="full"><span>Opisz krótko wnętrze</span><textarea name="Opis wnętrza" rows="6" placeholder="Napisz, czego dotyczy projekt, na jakim etapie jest inwestycja i co jest dla Ciebie najważniejsze."></textarea></label>
-      <button class="btn btn-dark full" type="submit">Wyślij ankietę</button>
-    </form>
+  <section class="page-visual-hero survey-hero">
+    <img src="projekt-04-03.webp" alt="Projekt wnętrza COS interiors">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-copy reveal"><p>Zacznijmy rozmowę</p><h1>ANKIETA</h1><span>Opowiedz nam o swoim wnętrzu.</span></div>
+  </section>
+  <section class="questionnaire-page decorated-section">
+    <span class="decor-orbit orbit-a" aria-hidden="true"></span>
+    <div class="questionnaire-intro reveal">
+      <p class="eyebrow">Jedno wnętrze. Twoje potrzeby.</p>
+      <div class="rotating-question" aria-live="polite"><span id="rotatingQuestion">Chcesz stworzyć z nami DOM?</span></div>
+      <p>Daj nam znać, jak możemy Ci pomóc!</p>
+      <p>Wypełnij ankietę i otrzymaj indywidualną ofertę.</p>
+      <div class="question-dots" aria-hidden="true"><i class="active"></i><i></i><i></i></div>
+    </div>
+    <div class="questionnaire-card"><form class="form questionnaire-form reveal" action="https://formsubmit.co/alicjachmiel.cosinteriors@gmail.com" method="POST">
+  <input type="hidden" name="_subject" value="Nowa ankieta ze strony COS interiors">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" class="form-next" value="">
+  <label><span>Imię i nazwisko</span><input type="text" name="Imię i nazwisko" required></label>
+  <label><span>E-mail</span><input type="email" name="E-mail" required></label>
+  <label><span>Telefon</span><input type="tel" name="Telefon" required></label>
+  <label><span>Metraż wnętrza</span><input type="text" name="Metraż" placeholder="np. 62 m²"></label>
+  <label><span>Lokalizacja inwestycji</span><input type="text" name="Lokalizacja" placeholder="np. Olkusz / Kraków / Warszawa"></label>
+  <label><span>Kiedy chcesz zacząć?</span><select name="Termin"><option value="">Wybierz termin</option><option>Jak najszybciej</option><option>W ciągu 1–3 miesięcy</option><option>W ciągu 3–6 miesięcy</option><option>Jeszcze nie wiem</option></select></label>
+  <label class="full"><span>Jaki zakres Cię interesuje?</span><select name="Zakres"><option value="">Wybierz zakres</option><option>Projekt koncepcyjny</option><option>Projekt kompleksowy</option><option>Nadzór autorski</option><option>Nie wiem — proszę o podpowiedź</option></select></label>
+  <label class="full"><span>Opisz krótko wnętrze</span><textarea name="Opis wnętrza" rows="6" placeholder="Napisz, czego dotyczy projekt, na jakim etapie jest inwestycja i co jest dla Ciebie najważniejsze."></textarea></label>
+  <button class="btn btn-mahogany full" type="submit">Wyślij ankietę</button>
+</form></div>
   </section>
 </main>
 <footer class="footer">
@@ -57,8 +68,9 @@
     <a href="tel:518394302">518 394 302</a>
     <a href="mailto:alicjachmiel.cosinteriors@gmail.com">alicjachmiel.cosinteriors@gmail.com</a>
     <a href="https://www.instagram.com/cos_interiors/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.facebook.com/p/COS-interiors-100088112425953/" target="_blank" rel="noopener">Facebook</a>
   </div>
   <p class="copyright">© COS interiors</p>
 </footer>
-<script src="script.js?v=cos-offwhite-1"></script>
+<script src="script.js?v=cos-funnel-v3"></script>
 </body></html>
