@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=cos-home-v4">
+  <link rel="stylesheet" href="style.css?v=cos-home-v5">
 </head>
 <body data-page="index" class="intro-active">
 <div class="site-intro" id="siteIntro" aria-hidden="true">
@@ -35,26 +35,20 @@
   <section class="hero home-hero">
     <img class="hero-image" src="hero.webp" alt="Jasne, nowoczesne wnętrze COS interiors">
     <div class="hero-overlay"></div>
-    <div class="hero-copy hero-copy-v4 reveal">
+    <div class="hero-copy hero-copy-v5 reveal">
       <p class="hero-kicker">COS INTERIORS / PROJEKTOWANIE WNĘTRZ</p>
-      <h1>DOM ZACZYNA SIĘ<br><span>OD CIEBIE.</span></h1>
+      <h1><span class="hero-line">DOM ZACZYNA SIĘ</span><span class="hero-line hero-line-accent">OD CIEBIE.</span></h1>
       <p class="hero-sub">Opowiedz mi, jak chcesz w nim żyć.</p>
       <div class="hero-actions">
         <a href="ankieta.html" class="btn btn-mahogany">Wypełnij ankietę</a>
-        <a href="projekty.html" class="btn btn-moss">Zobacz projekty</a>
+        <a href="projekty.html" class="btn btn-light">Zobacz projekty</a>
       </div>
       <a href="oferta.html" class="hero-offer-link">Poznaj ofertę <span>↗</span></a>
-    </div>
-    <div class="hero-social-card reveal">
-      <span>Znajdź COS</span>
-      <a href="https://www.instagram.com/cos_interiors/" target="_blank" rel="noopener">Instagram ↗</a>
-      <a href="https://www.facebook.com/p/COS-interiors-100088112425953/" target="_blank" rel="noopener">Facebook ↗</a>
-      <a href="mailto:alicjachmiel.cosinteriors@gmail.com">E-mail ↗</a>
     </div>
     <a class="hero-scroll" href="#jak-zaczynamy" aria-label="Przejdź niżej">Przewiń <span>↓</span></a>
   </section>
 
-  <section class="start-steps section-space decorated-section" id="jak-zaczynamy">
+  <section class="start-steps section-space decorated-section bg-word-section" data-word="INTERIORS" id="jak-zaczynamy">
     <span class="decor-arc decor-arc-one" aria-hidden="true"></span>
     <div class="start-steps-head reveal">
       <div>
@@ -82,25 +76,58 @@
     </div>
   </section>
 
-  <section class="home-projects-v4 section-space decorated-section">
+  <section class="home-projects-v5 section-space decorated-section bg-word-section" data-word="COS">
     <span class="decor-disc decor-disc-one" aria-hidden="true"></span>
     <div class="content-heading reveal">
       <div><p class="eyebrow">02 / Wybrane realizacje</p><h2>PROJEKTY</h2></div>
       <div><p>Każde wnętrze zaczyna się od innych potrzeb. Zobacz wybrane projekty i ich charakter.</p><a href="projekty.html" class="text-link">Zobacz wszystkie projekty <b>↗</b></a></div>
     </div>
-    <div class="project-cards-v4">
-      <article class="project-card-v4 reveal">
-        <button class="project-card-image gallery-item" type="button" data-gallery="home-olkusz" data-src="projekt-02-02.webp"><img src="projekt-02-02.webp" alt="Projekt wnętrza w Olkuszu"><span>Powiększ ↗</span></button>
-        <div class="project-card-copy"><span>01 / Olkusz</span><h3>Spokojne proporcje i miękkie światło.</h3><a href="projekty.html#projekt-2" class="text-link">Zobacz projekt <b>↗</b></a></div>
+    <div class="projects-editorial">
+      <article class="project-story project-story-main reveal">
+        <button class="project-story-image gallery-item" type="button" data-gallery="home-olkusz" data-src="projekt-02-02.webp">
+          <img src="projekt-02-02.webp" alt="Projekt wnętrza w Olkuszu"><span>Powiększ ↗</span>
+        </button>
+        <div class="project-story-copy">
+          <span class="project-meta">01 / Olkusz</span>
+          <h3>Spokojne proporcje i miękkie światło.</h3>
+          <p>Jasna, spokojna baza została zbudowana wokół prostych brył i miękkiego światła. Materiały nie konkurują ze sobą — tworzą jednolite, ciepłe tło codzienności.</p>
+          <details class="project-notes">
+            <summary>Materiały i założenia <b>+</b></summary>
+            <div><span>jasne drewno</span><span>kamień o miękkim rysunku</span><span>offwhite</span><span>światło rozproszone</span></div>
+          </details>
+          <a href="projekty.html#projekt-2" class="text-link">Zobacz cały projekt <b>↗</b></a>
+        </div>
       </article>
-      <article class="project-card-v4 reveal">
-        <button class="project-card-image gallery-item" type="button" data-gallery="home-cieszyn" data-src="projekt-03-07.webp"><img src="projekt-03-07.webp" alt="Projekt wnętrza w Cieszynie"><span>Powiększ ↗</span></button>
-        <div class="project-card-copy"><span>02 / Cieszyn</span><h3>Kontrast materiałów i oszczędny detal.</h3><a href="projekty.html#projekt-3" class="text-link">Zobacz projekt <b>↗</b></a></div>
-      </article>
-      <article class="project-card-v4 reveal">
-        <button class="project-card-image gallery-item" type="button" data-gallery="home-warszawa" data-src="projekt-04-03.webp"><img src="projekt-04-03.webp" alt="Projekt wnętrza w Warszawie"><span>Powiększ ↗</span></button>
-        <div class="project-card-copy"><span>03 / Warszawa</span><h3>Miejska funkcja w spokojnej palecie.</h3><a href="projekty.html#projekt-4" class="text-link">Zobacz projekt <b>↗</b></a></div>
-      </article>
+      <div class="projects-editorial-side">
+        <article class="project-story project-story-side reveal">
+          <button class="project-story-image gallery-item" type="button" data-gallery="home-cieszyn" data-src="projekt-03-07.webp">
+            <img src="projekt-03-07.webp" alt="Projekt wnętrza w Cieszynie"><span>Powiększ ↗</span>
+          </button>
+          <div class="project-story-copy">
+            <span class="project-meta">02 / Cieszyn</span>
+            <h3>Kontrast materiałów, oszczędny detal.</h3>
+            <details class="project-notes">
+              <summary>Co buduje charakter <b>+</b></summary>
+              <div><span>ciemniejsze drewno</span><span>jasny kamień</span><span>czarne detale</span><span>światło liniowe</span></div>
+            </details>
+            <a href="projekty.html#projekt-3" class="text-link">Zobacz projekt <b>↗</b></a>
+          </div>
+        </article>
+        <article class="project-story project-story-side project-story-shift reveal">
+          <button class="project-story-image gallery-item" type="button" data-gallery="home-warszawa" data-src="projekt-04-03.webp">
+            <img src="projekt-04-03.webp" alt="Projekt wnętrza w Warszawie"><span>Powiększ ↗</span>
+          </button>
+          <div class="project-story-copy">
+            <span class="project-meta">03 / Warszawa</span>
+            <h3>Miejska funkcja w spokojnej palecie.</h3>
+            <details class="project-notes">
+              <summary>Co jest w środku <b>+</b></summary>
+              <div><span>zabudowa na wymiar</span><span>szkło</span><span>neutralna baza</span><span>strefowanie funkcji</span></div>
+            </details>
+            <a href="projekty.html#projekt-4" class="text-link">Zobacz projekt <b>↗</b></a>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -109,17 +136,23 @@
       <div><p class="eyebrow">03 / Zakres współpracy</p><h2>OFERTA</h2></div>
       <div><p>Zakres dopasowujemy do etapu inwestycji i poziomu wsparcia, którego naprawdę potrzebujesz.</p><a href="oferta.html" class="text-link">Pełna oferta <b>↗</b></a></div>
     </div>
-    <div class="offer-cards-v4">
-      <a href="oferta.html#koncepcyjny" class="offer-card-v4 reveal"><span>01</span><h3>Projekt<br>koncepcyjny</h3><p>Kierunek, układ i wizualna koncepcja wnętrza.</p><b>↗</b></a>
-      <a href="oferta.html#kompleksowy" class="offer-card-v4 reveal"><span>02</span><h3>Projekt<br>kompleksowy</h3><p>Kompletny projekt wraz z dokumentacją techniczną.</p><b>↗</b></a>
-      <a href="oferta.html#nadzor" class="offer-card-v4 reveal"><span>03</span><h3>Nadzór<br>autorski</h3><p>Wsparcie przy realizacji projektu kompleksowego.</p><b>↗</b></a>
+    <div class="offer-flow-v5">
+      <a href="oferta.html#koncepcyjny" class="offer-orbit-item reveal">
+        <span class="offer-orbit-number">01</span><h3>Projekt koncepcyjny</h3><p>Kierunek, układ funkcjonalny i wizualna koncepcja wnętrza.</p><b>↗</b>
+      </a>
+      <a href="oferta.html#kompleksowy" class="offer-orbit-item reveal">
+        <span class="offer-orbit-number">02</span><h3>Projekt kompleksowy</h3><p>Pełny projekt wraz z dokumentacją potrzebną do realizacji.</p><b>↗</b>
+      </a>
+      <a href="oferta.html#nadzor" class="offer-orbit-item reveal">
+        <span class="offer-orbit-number">03</span><h3>Nadzór autorski</h3><p>Wsparcie na etapie realizacji projektu kompleksowego.</p><b>↗</b>
+      </a>
     </div>
   </section>
 
-  <section class="about-v4 section-space decorated-section">
+  <section class="about-v5 section-space decorated-section bg-word-section" data-word="COS">
     <span class="decor-arc decor-arc-two" aria-hidden="true"></span>
-    <div class="about-v4-image reveal"><img src="projekt-02-06.webp" alt="Detal projektu COS interiors"></div>
-    <div class="about-v4-copy reveal">
+    <div class="about-v5-image reveal"><img src="o-mnie.webp" alt="Alicja Chmiel — COS interiors"></div>
+    <div class="about-v5-copy reveal">
       <p class="eyebrow">04 / O mnie</p>
       <h2>Projektuję domy, które mają <em>dobrze się żyć.</em></h2>
       <p>W COS interiors projekt zaczyna się od rozmowy. Poznaję Twój rytm dnia, potrzeby i sposób korzystania z przestrzeni. Na tej podstawie buduję funkcję, dobieram materiały, światło i detal — tak, żeby wnętrze było spójne, ale przede wszystkim Twoje.</p>
@@ -128,12 +161,18 @@
     </div>
   </section>
 
-  <section class="socials-v4 section-space">
-    <div class="socials-v4-head reveal"><p class="eyebrow">05 / Zostańmy w kontakcie</p><h2>ZOBACZ COS<br><span>BLIŻEJ.</span></h2></div>
-    <div class="socials-v4-links">
-      <a class="social-v4 reveal" href="https://www.instagram.com/cos_interiors/" target="_blank" rel="noopener"><span>Instagram</span><strong>@cos_interiors</strong><b>↗</b></a>
-      <a class="social-v4 reveal" href="https://www.facebook.com/p/COS-interiors-100088112425953/" target="_blank" rel="noopener"><span>Facebook</span><strong>COS interiors</strong><b>↗</b></a>
-      <a class="social-v4 reveal" href="mailto:alicjachmiel.cosinteriors@gmail.com"><span>E-mail</span><strong>Napisz do mnie</strong><b>↗</b></a>
+  <section class="socials-v5 section-space">
+    <div class="social-panel-v5 reveal">
+      <div class="social-panel-copy">
+        <p class="eyebrow">05 / COS online</p>
+        <h2>Zobacz, co dzieje się <span>na bieżąco.</span></h2>
+        <p>Nowe realizacje, kulisy projektów i inspiracje publikuję również online.</p>
+      </div>
+      <div class="social-panel-links">
+        <a href="https://www.instagram.com/cos_interiors/" target="_blank" rel="noopener" class="social-row-v5"><i>IG</i><div><strong>Instagram</strong><small>@cos_interiors</small></div><b>↗</b></a>
+        <a href="https://www.facebook.com/p/COS-interiors-100088112425953/" target="_blank" rel="noopener" class="social-row-v5"><i>f</i><div><strong>Facebook</strong><small>COS interiors</small></div><b>↗</b></a>
+        <a href="mailto:alicjachmiel.cosinteriors@gmail.com" class="social-row-v5"><i>@</i><div><strong>E-mail</strong><small>Napisz do mnie</small></div><b>↗</b></a>
+      </div>
     </div>
   </section>
 </main>
@@ -156,5 +195,5 @@
   </div>
   <p class="copyright">© COS interiors</p>
 </footer>
-<script src="script.js?v=cos-home-v4"></script>
+<script src="script.js?v=cos-home-v5"></script>
 </body></html>

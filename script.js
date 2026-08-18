@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   const intro=document.getElementById('siteIntro');
   if(intro){
     const hideIntro=()=>{intro.classList.add('is-hidden');body.classList.remove('intro-active');setTimeout(()=>intro.remove(),650)};
-    if(sessionStorage.getItem('cosIntroSeen')){hideIntro()}else{sessionStorage.setItem('cosIntroSeen','1');setTimeout(hideIntro,1150)}
+    setTimeout(hideIntro,1150)
   }
   const page=body.dataset.page;
   document.querySelectorAll('.nav a').forEach(a=>{if(a.dataset.page===page)a.classList.add('active')});
@@ -44,3 +44,12 @@ document.addEventListener('DOMContentLoaded',()=>{
     setInterval(()=>{rq.classList.add('swap-out');setTimeout(()=>{qi=(qi+1)%questions.length;rq.textContent=questions[qi];dots.forEach((d,i)=>d.classList.toggle('active',i===qi));rq.classList.remove('swap-out');rq.classList.add('swap-in');requestAnimationFrame(()=>requestAnimationFrame(()=>rq.classList.remove('swap-in')));},340);},3000);
   }
 });
+
+// V5 header state: transparent at the very top, off-white after the first scroll.
+(()=>{
+  const header=document.querySelector('.site-header');
+  if(!header)return;
+  const syncHeader=()=>header.classList.toggle('is-scrolled',window.scrollY>18);
+  syncHeader();
+  window.addEventListener('scroll',syncHeader,{passive:true});
+})();
