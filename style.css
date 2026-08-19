@@ -783,3 +783,200 @@ button{color:inherit}
   .subpage-v7[data-page="kontakt"] .contact-row-v7:nth-child(4),
   .subpage-v7[data-page="kontakt"] .contact-row-v7:nth-child(5){grid-column:1;min-height:170px}
 }
+
+/* =========================================================
+   COS INTERIORS — V9 TECHNICAL / PRESENTATION FIXES
+   Scope: requested header, projects, contact and footer fixes only
+   ========================================================= */
+
+/* Header: vertically centred logo/navigation and stronger logo contrast */
+.site-header,
+.home-start .site-header,
+.subpage-v7 .site-header{
+  align-items:center;
+}
+.nav,
+.home-start .nav,
+.subpage-v7 .nav{
+  padding-top:0;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.brand img{
+  display:block;
+  opacity:1;
+  filter:brightness(.48) contrast(1.45) saturate(1.12);
+  transition:filter .28s ease,opacity .28s ease;
+}
+
+/* START: logo remains visible over the dark left side of the hero */
+.home-start .site-header:not(.is-scrolled) .brand img{
+  filter:brightness(0) invert(1) drop-shadow(0 2px 10px rgba(77,52,45,.24));
+}
+.home-start .site-header.is-scrolled .brand img{
+  filter:brightness(.42) contrast(1.5) saturate(1.18);
+}
+
+/* SUBPAGES: keep the top bar translucent, but give text/logo enough contrast */
+.subpage-v7 .site-header:not(.is-scrolled){
+  background:rgba(237,231,219,.82)!important;
+  border-bottom:1px solid rgba(77,52,45,.08)!important;
+  box-shadow:0 6px 24px rgba(77,52,45,.045)!important;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+.subpage-v7 .site-header:not(.is-scrolled) .brand img{
+  filter:brightness(.40) contrast(1.55) saturate(1.16);
+}
+.subpage-v7 .site-header:not(.is-scrolled) .nav a{
+  color:var(--mahogany);
+  text-shadow:none;
+}
+
+/* START projects: show substantially more of each 4:3 visualisation */
+.home-start .project-card-v6 .project-story-image,
+.home-start .project-card-v6-wide .project-story-image{
+  height:auto;
+  min-height:0;
+  aspect-ratio:4 / 3;
+  background:#e7dfd3;
+}
+.home-start .project-card-v6 .project-story-image img,
+.home-start .project-card-v6-wide .project-story-image img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+}
+.home-start .project-card-v6-wide{
+  grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);
+}
+
+/* PROJECTS subpage: all visualisations expanded from the start */
+.subpage-v7[data-page="projekty"] .project-extra{
+  display:block!important;
+}
+.subpage-v7[data-page="projekty"] .show-project{
+  display:none!important;
+}
+.subpage-v7[data-page="projekty"] .project-strip-v7{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+
+/* CONTACT: long e-mail fits cleanly without ugly clipping */
+.subpage-v7[data-page="kontakt"] .contact-row-v7[href^="mailto:"] strong{
+  font-size:clamp(19px,1.55vw,29px);
+  line-height:1.08;
+  letter-spacing:-.018em;
+  overflow-wrap:anywhere;
+  word-break:normal;
+  padding-right:32px;
+}
+
+/* Footer: darker, neutral warm tone so it does not merge with mahogany sections */
+.footer,
+.footer-v4,
+.footer-v7{
+  background:#292421!important;
+  color:var(--off)!important;
+  border-top:1px solid rgba(237,231,219,.16)!important;
+}
+.footer a,
+.footer-nav a,
+.footer-contact a,
+.footer-contact,
+.footer-nav,
+.footer .copyright{
+  color:var(--off)!important;
+}
+.footer a:hover{
+  color:#D8CCBD!important;
+}
+.footer-logo img{
+  filter:brightness(0) invert(1);
+  opacity:.94;
+}
+.footer .copyright{
+  border-top-color:rgba(237,231,219,.18)!important;
+}
+
+@media(max-width:1100px){
+  .home-start .project-card-v6-wide{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:820px){
+  .site-header,
+  .home-start .site-header,
+  .home-start .site-header.is-scrolled,
+  .subpage-v7 .site-header,
+  .subpage-v7 .site-header.is-scrolled{
+    align-items:center;
+  }
+  .menu-toggle{margin-top:0}
+  .home-start .project-card-v6 .project-story-image,
+  .home-start .project-card-v6-wide .project-story-image{
+    height:auto;
+    min-height:0;
+    max-height:none;
+    aspect-ratio:4 / 3;
+  }
+  .subpage-v7[data-page="projekty"] .project-strip-v7{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .subpage-v7[data-page="kontakt"] .contact-row-v7[href^="mailto:"] strong{
+    font-size:clamp(18px,3.9vw,25px);
+    padding-right:24px;
+  }
+}
+
+@media(max-width:500px){
+  .subpage-v7[data-page="projekty"] .project-strip-v7{grid-template-columns:1fr}
+  .subpage-v7[data-page="kontakt"] .contact-row-v7[href^="mailto:"] strong{
+    font-size:20px;
+  }
+}
+
+/* V9.1 small layout refinements */
+.home-start .brand{width:100px}
+.home-start .site-header.is-scrolled .brand{width:90px}
+.subpage-v7 .brand{width:100px}
+.subpage-v7 .site-header.is-scrolled .brand{width:90px}
+
+/* Keep project previews larger, but not excessively tall */
+.home-start .project-card-v6 .project-story-image,
+.home-start .project-card-v6-wide .project-story-image{
+  height:clamp(330px,24vw,430px);
+  aspect-ratio:auto;
+}
+.home-start .project-card-v6 .project-story-image img,
+.home-start .project-card-v6-wide .project-story-image img{
+  object-fit:cover;
+  object-position:center;
+}
+
+/* Contact: give the e-mail card enough real width instead of forcing an ugly wrap */
+@media(min-width:1101px){
+  .subpage-v7[data-page="kontakt"] .contact-row-v7:nth-child(1){grid-column:span 2}
+  .subpage-v7[data-page="kontakt"] .contact-row-v7:nth-child(2){grid-column:span 4}
+  .subpage-v7[data-page="kontakt"] .contact-row-v7:nth-child(3),
+  .subpage-v7[data-page="kontakt"] .contact-row-v7:nth-child(4),
+  .subpage-v7[data-page="kontakt"] .contact-row-v7:nth-child(5){grid-column:span 2}
+  .subpage-v7[data-page="kontakt"] .contact-row-v7[href^="mailto:"] strong{
+    font-size:clamp(23px,2.1vw,36px);
+    max-width:100%;
+  }
+}
+
+@media(max-width:820px){
+  .home-start .brand,.home-start .site-header.is-scrolled .brand,
+  .subpage-v7 .brand,.subpage-v7 .site-header.is-scrolled .brand{width:78px}
+  .home-start .project-card-v6 .project-story-image,
+  .home-start .project-card-v6-wide .project-story-image{
+    height:72vw;
+    max-height:420px;
+    aspect-ratio:auto;
+  }
+}
