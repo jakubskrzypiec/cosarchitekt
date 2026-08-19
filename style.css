@@ -1248,3 +1248,91 @@ button{color:inherit}
     bottom:-.05em!important;
   }
 }
+
+
+/* =========================================================
+   v14 — HOME TYPOGRAPHY CLEANUP
+   Neutral copy is black on light sections.
+   Mahogany stays only as a deliberate accent / CTA color.
+   ========================================================= */
+.home-start{
+  color:#171412;
+}
+
+.home-start .start-steps,
+.home-start .home-projects-v5,
+.home-start .about-v5,
+.home-start .social-panel-v5,
+.home-start .footer{
+  color:#171412;
+}
+
+.home-start .start-steps .eyebrow,
+.home-start .start-steps-lead,
+.home-start .start-step,
+.home-start .start-step h3,
+.home-start .start-step p,
+.home-start .home-projects-v5 .content-heading,
+.home-start .home-projects-v5 .content-heading h2,
+.home-start .home-projects-v5 .content-heading p,
+.home-start .project-card-v6-copy,
+.home-start .project-card-v6-copy h3,
+.home-start .project-card-v6-copy p,
+.home-start .project-notes summary,
+.home-start .project-notes>div span,
+.home-start .about-v5-copy,
+.home-start .about-v5-copy>p:not(.eyebrow),
+.home-start .about-v5-copy .eyebrow,
+.home-start .social-panel-copy,
+.home-start .social-panel-copy h2,
+.home-start .social-row-v5,
+.home-start .social-row-v5 strong,
+.home-start .social-row-v5 small,
+.home-start .footer,
+.home-start .footer a,
+.home-start .footer-contact,
+.home-start .footer-contact a,
+.home-start .footer-nav,
+.home-start .footer .copyright{
+  color:#171412 !important;
+}
+
+/* Small project labels are information, not a color accent. */
+.home-start .project-meta{
+  color:#171412 !important;
+  opacity:.72;
+}
+
+/* Keep intentional accent words only. */
+.home-start .start-steps-head h2 em,
+.home-start .about-v5-copy h2 em{
+  color:var(--mahogany) !important;
+}
+
+/* Links on light backgrounds should read as neutral text;
+   their underline / hover still carries the brand color. */
+.home-start .home-projects-v5 .text-link,
+.home-start .about-v5 .text-link{
+  color:#171412 !important;
+}
+
+/* Do not override sections where black would lose contrast. */
+.home-start .home-hero,
+.home-start .home-offer-v4,
+.home-start .socials-v5{
+  color:var(--off);
+}
+
+.home-start .home-offer-v4 .content-heading,
+.home-start .home-offer-v4 .content-heading h2,
+.home-start .home-offer-v4 .content-heading p,
+.home-start .home-offer-v4 .offer-orbit-item,
+.home-start .home-offer-v4 .text-link{
+  color:var(--off) !important;
+}
+
+/* Mahogany icon tiles / buttons remain branded. */
+.home-start .social-row-v5 i,
+.home-start .btn-mahogany{
+  color:var(--off) !important;
+}
