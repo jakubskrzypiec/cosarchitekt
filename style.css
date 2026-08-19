@@ -980,3 +980,111 @@ button{color:inherit}
     aspect-ratio:auto;
   }
 }
+
+/* =========================================================
+   COS INTERIORS — V10 FINAL MICRO FIXES
+   Only: stable header, cropped header logo, old light footer,
+   and a better landing-page Warszawa visual.
+   ========================================================= */
+
+/* Header must NOT resize when the background switches on scroll. */
+.site-header,
+.site-header.is-scrolled,
+.home-start .site-header,
+.home-start .site-header.is-scrolled,
+.subpage-v7 .site-header,
+.subpage-v7 .site-header.is-scrolled{
+  height:84px !important;
+  padding:8px 4.5vw !important;
+  align-items:center !important;
+}
+
+.home-start .brand,
+.home-start .site-header.is-scrolled .brand,
+.subpage-v7 .brand,
+.subpage-v7 .site-header.is-scrolled .brand,
+.site-header .brand{
+  width:100px !important;
+  height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 100px;
+  transition:none !important;
+  overflow:visible;
+}
+
+.brand img{
+  width:100% !important;
+  height:auto !important;
+  max-height:48px;
+  object-fit:contain;
+  object-position:center;
+}
+
+.home-start .nav,
+.subpage-v7 .nav,
+.site-header .nav{
+  padding-top:0 !important;
+  align-self:center;
+}
+
+/* Keep only color/background transitions — no geometry change. */
+.site-header{
+  transition:background .32s ease,border-color .32s ease,box-shadow .32s ease,backdrop-filter .32s ease !important;
+}
+
+/* Restore the old light footer on every page. */
+.footer,
+.footer-v4,
+.footer-v7{
+  background:var(--off) !important;
+  color:var(--mahogany) !important;
+  border-top:1px solid var(--line) !important;
+}
+.footer a,
+.footer-nav a,
+.footer-contact a,
+.footer-contact,
+.footer-nav,
+.footer .copyright{
+  color:var(--mahogany) !important;
+}
+.footer a:hover{
+  color:var(--moss) !important;
+}
+.footer-logo img{
+  filter:none !important;
+  opacity:1 !important;
+}
+.footer .copyright{
+  border-top-color:var(--line) !important;
+}
+
+/* Landing / Warszawa: make the visual read as an actual full interior,
+   not a thin cropped strip. The HTML now uses projekt-04-06.webp. */
+.home-start .project-card-v6-wide .project-story-image img{
+  object-position:center center !important;
+}
+
+@media (max-width:820px){
+  .site-header,
+  .site-header.is-scrolled,
+  .home-start .site-header,
+  .home-start .site-header.is-scrolled,
+  .subpage-v7 .site-header,
+  .subpage-v7 .site-header.is-scrolled{
+    height:70px !important;
+    padding:7px 18px !important;
+  }
+  .home-start .brand,
+  .home-start .site-header.is-scrolled .brand,
+  .subpage-v7 .brand,
+  .subpage-v7 .site-header.is-scrolled .brand,
+  .site-header .brand{
+    width:76px !important;
+    height:42px;
+    flex-basis:76px;
+  }
+  .brand img{max-height:38px}
+}
