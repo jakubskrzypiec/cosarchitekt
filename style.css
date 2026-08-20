@@ -2287,3 +2287,22 @@ a.survey-link:not(.social-row-v5):not(.start-step){color:var(--moss);}
     padding:24px 20px!important;
   }
 }
+
+
+/* ===== ARTYKUŁY: bez zdjęć w nagłówkach ===== */
+.article-page-v11 .article-header-grid-v11{
+  display:block!important;
+  max-width:1120px!important;
+}
+.article-page-v11 .article-header-copy-v11{
+  max-width:980px!important;
+}
+.article-page-v11 .article-header-image-v11{
+  display:none!important;
+}
+.article-page-v11 .article-header-copy-v11 h1{
+  max-width:980px!important;
+}
+.article-page-v11 .article-header-copy-v11>p:not(.eyebrow){
+  max-width:760px!important;
+}
