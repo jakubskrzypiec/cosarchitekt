@@ -14,25 +14,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="style-fix-hero.css?v=2108-2145" rel="stylesheet"/>
-
-<style id="cos-hero-hardfix">
-  .home-hero .hero-line::after,
-  .home-hero .hero-line-accent::after{
-    display:none!important;
-    content:none!important;
-    width:0!important;
-    height:0!important;
-    background:transparent!important;
-  }
-  .home-hero .hero-scroll{
-    display:none!important;
-    visibility:hidden!important;
-    opacity:0!important;
-    pointer-events:none!important;
-  }
-</style>
-
+<link href="style.css?v=cos-client-20-08" rel="stylesheet"/>
 </head>
 <body class="intro-active home-start" data-page="index">
 <div aria-hidden="true" class="site-intro" id="siteIntro">
@@ -56,7 +38,7 @@
 <div class="hero-overlay"></div>
 <div class="hero-copy hero-copy-v5 reveal">
 <p class="hero-kicker">COS INTERIORS / PROJEKTOWANIE WNĘTRZ</p>
-<h1><span class="hero-line">DOM ZACZYNA SIĘ</span><span class="hero-line">OD CIEBIE.</span></h1>
+<h1><span class="hero-line">DOM ZACZYNA SIĘ</span><span class="hero-line hero-line-accent">OD CIEBIE.</span></h1>
 <p class="hero-sub">Opowiedz mi, jak chcesz w nim żyć.</p>
 <div class="hero-actions">
 <a class="btn survey-link btn-survey" href="ankieta.html">Wypełnij ankietę</a>
@@ -64,12 +46,22 @@
 </div>
 <a class="hero-offer-link" href="oferta.html">Poznaj ofertę <span aria-hidden="true" class="ui-arrow"></span></a>
 </div>
+<a aria-label="Przejdź niżej" class="hero-scroll" href="#jak-zaczynamy">Przewiń <span>↓</span></a>
 </section><section aria-label="Opinie Google" class="google-reviews-strip">
 <div class="google-reviews-inner reveal">
-<div class="google-review-label"><span class="google-g">G</span><div><small>OPINIE KLIENTÓW</small><strong>Google</strong></div></div>
+<div class="google-review-label">
+<div class="google-brand-row">
+<span aria-hidden="true" class="google-g">G</span>
+<div>
+<small>OPINIE KLIENTÓW</small>
+<strong aria-label="Google" class="google-wordmark"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></strong>
+</div>
+</div>
+<div aria-hidden="true" class="google-stars">★★★★★</div>
+</div>
 <div class="google-review-window" data-google-review-window="">
-<p>Opinie klientów COS interiors są dostępne bezpośrednio w Google.</p>
-<span>Komponent jest gotowy na rotację prawdziwych cytatów po ich wklejeniu.</span>
+<p>Opinie klientów COS interiors znajdziesz bezpośrednio w Google.</p>
+<span>Kliknij poniżej, aby przejść do wszystkich opinii i ocen.</span>
 </div>
 <a class="google-review-link" href="https://www.google.com/search?sa=X&amp;sca_esv=9646931635c15a36&amp;rlz=1C1GCEA_plPL1187PL1187&amp;sxsrf=APpeQnvJ3XMS2NmRpWu-cuoQ2NfRf5q5xw:1787243254011&amp;q=Alicja+Chmiel+COS+interiors+Opinie&amp;rflfq=1&amp;num=20&amp;stick=H4sIAAAAAAAAAONgkxI2MTcwtTQzNTQxNjIzMTQzMzCw3MDI-IpRyTEnMzkrUcE5IzczNUfB2T9YITOvJLUoM7-oWMG_IDMvM3URKxGKAAyg5cBkAAAA&amp;rldimm=4705965143264166009&amp;tbm=lcl&amp;hl=pl-PL&amp;ved=2ahUKEwis76D6z6-WAxXvVvEDHdfdIsUQ9fQKegQIUhAG&amp;biw=1912&amp;bih=940&amp;dpr=1#lkt=LocalPoiReviews" rel="noopener" target="_blank">Zobacz opinie <i aria-hidden="true" class="ui-arrow"></i></a>
 </div>
