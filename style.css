@@ -1908,3 +1908,46 @@ a.survey-link:not(.social-row-v5):not(.start-step){color:var(--moss);}
   .article-content-v11{display:block;}
   .article-callout-v11{padding:26px 22px;}
 }
+
+
+/* ===== COS FINAL UI FIX 21.08 ===== */
+
+/* Projekty: wyraźne odcięcie dwóch ciemnych sekcji bez zmiany ich layoutu. */
+.subpage-v7[data-page="projekty"] .projects-seo-intro-v10{
+  border-top:14px solid var(--off)!important;
+}
+
+/* Ankieta ma być zielonym, prostokątnym CTA z białym napisem. */
+.projects-cta-v7 .btn-survey,
+.offer-survey-v7 .btn-survey,
+.questionnaire-form-v7 .btn-survey{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  background:var(--moss)!important;
+  border:1px solid var(--moss)!important;
+  color:var(--off)!important;
+  border-radius:0!important;
+  text-transform:uppercase!important;
+  letter-spacing:.1em!important;
+  font-weight:700!important;
+}
+.projects-cta-v7 .btn-survey:hover,
+.offer-survey-v7 .btn-survey:hover,
+.questionnaire-form-v7 .btn-survey:hover{
+  background:var(--moss-dark)!important;
+  border-color:var(--moss-dark)!important;
+  color:var(--off)!important;
+}
+
+/* W menu i stopce 'Ankieta' jest normalnym linkiem tekstowym.
+   Zielony kolor zostaje wyłącznie na właściwych CTA. */
+.site-header .nav a[data-page="ankieta"],
+.footer-nav a[href="ankieta.html"]{
+  color:inherit!important;
+}
+
+/* Zachowaj normalny aktywny stan strony Ankieta. */
+.subpage-v7[data-page="ankieta"] .nav a[data-page="ankieta"]{
+  color:inherit!important;
+}
