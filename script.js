@@ -37,12 +37,20 @@ document.addEventListener('DOMContentLoaded',()=>{
   lb?.addEventListener('click',e=>{if(e.target===lb)closeLb()});
   document.addEventListener('keydown',e=>{if(!lb?.classList.contains('active'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft'){index=(index-1+current.length)%current.length;setImage()}if(e.key==='ArrowRight'){index=(index+1)%current.length;setImage()}});
 
-  const rq=document.getElementById('rotatingQuestion');
-  if(rq&&!reduced){
-    const questions=['Chcesz stworzyć z nami DOM?','Potrzebujesz pomocy z doborem pakietu?','Zastanawiasz się nad współpracą?'];
-    const dots=[...document.querySelectorAll('.question-dots i')];let qi=0;
-    setInterval(()=>{rq.classList.add('swap-out');setTimeout(()=>{qi=(qi+1)%questions.length;rq.textContent=questions[qi];dots.forEach((d,i)=>d.classList.toggle('active',i===qi));rq.classList.remove('swap-out');rq.classList.add('swap-in');requestAnimationFrame(()=>requestAnimationFrame(()=>rq.classList.remove('swap-in')));},340);},3000);
+  const questionSets=[
+    {el:document.getElementById('rotatingQuestion'),dots:[...document.querySelectorAll('.rotating-question-v7 + .question-dots i, .survey-question-v7 .question-dots i')]},
+    {el:document.getElementById('homeRotatingQuestion'),dots:[...document.querySelectorAll('.home-question-dots i')]}
+  ];
+  const questions=['Chcesz stworzyć z nami DOM?','Potrzebujesz pomocy z doborem pakietu?','Zastanawiasz się nad współpracą?'];
+  if(!reduced){
+    questionSets.forEach(({el,dots})=>{
+      if(!el)return;let qi=0;
+      setInterval(()=>{el.classList.add('swap-out');setTimeout(()=>{qi=(qi+1)%questions.length;el.textContent=questions[qi];dots.forEach((d,i)=>d.classList.toggle('active',i===qi));el.classList.remove('swap-out');el.classList.add('swap-in');requestAnimationFrame(()=>requestAnimationFrame(()=>el.classList.remove('swap-in')));},340);},3000);
+    });
   }
+
+  const heroSlides=[...document.querySelectorAll('.hero-slide')];
+  if(heroSlides.length>1&&!reduced){let hs=0;setInterval(()=>{heroSlides[hs].classList.remove('is-active');hs=(hs+1)%heroSlides.length;heroSlides[hs].classList.add('is-active');},5200);}
 });
 
 // V5 header state: transparent at the very top, off-white after the first scroll.
