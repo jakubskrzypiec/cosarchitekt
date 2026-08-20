@@ -1910,44 +1910,31 @@ a.survey-link:not(.social-row-v5):not(.start-step){color:var(--moss);}
 }
 
 
-/* ===== COS FINAL UI FIX 21.08 ===== */
-
-/* Projekty: wyraźne odcięcie dwóch ciemnych sekcji bez zmiany ich layoutu. */
-.subpage-v7[data-page="projekty"] .projects-seo-intro-v10{
-  border-top:14px solid var(--off)!important;
+/* ===== Artykuly: 1 zdjecie + reszta jako kafelki ===== */
+.article-card-tile-v11{
+  background:#f3ede2;
+  border:1px solid var(--line);
+  padding:26px 24px 24px;
+  min-height:100%;
 }
-
-/* Ankieta ma być zielonym, prostokątnym CTA z białym napisem. */
-.projects-cta-v7 .btn-survey,
-.offer-survey-v7 .btn-survey,
-.questionnaire-form-v7 .btn-survey{
-  display:inline-flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  background:var(--moss)!important;
-  border:1px solid var(--moss)!important;
-  color:var(--off)!important;
-  border-radius:0!important;
-  text-transform:uppercase!important;
-  letter-spacing:.1em!important;
-  font-weight:700!important;
+.article-card-tile-v11 .article-card-copy-v11{
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
 }
-.projects-cta-v7 .btn-survey:hover,
-.offer-survey-v7 .btn-survey:hover,
-.questionnaire-form-v7 .btn-survey:hover{
-  background:var(--moss-dark)!important;
-  border-color:var(--moss-dark)!important;
-  color:var(--off)!important;
+.article-card-tile-v11 .article-card-copy-v11 h2{
+  font-size:clamp(28px,2.6vw,44px);
 }
-
-/* W menu i stopce 'Ankieta' jest normalnym linkiem tekstowym.
-   Zielony kolor zostaje wyłącznie na właściwych CTA. */
-.site-header .nav a[data-page="ankieta"],
-.footer-nav a[href="ankieta.html"]{
-  color:inherit!important;
+.article-card-tile-v11 .article-card-copy-v11 p{
+  margin-bottom:22px;
 }
-
-/* Zachowaj normalny aktywny stan strony Ankieta. */
-.subpage-v7[data-page="ankieta"] .nav a[data-page="ankieta"]{
-  color:inherit!important;
+.article-card-tile-v11 .text-link{
+  margin-top:auto;
+}
+.article-card-tile-v11 .article-card-meta-v11{
+  margin-bottom:16px;
+}
+@media (max-width: 900px){
+  .article-card-tile-v11{padding:22px 18px 20px;}
 }
