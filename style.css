@@ -1748,3 +1748,65 @@ a.survey-link:not(.social-row-v5):not(.start-step){color:var(--moss);}
   .home-news-head{grid-template-columns:1fr;gap:28px}.home-news-grid{grid-template-columns:1fr}.home-news-card-featured{grid-column:auto}.home-news-card{min-height:230px;border-right:0!important;border-bottom:1px solid rgba(237,231,219,.2)}.home-news-card:last-child{border-bottom:0}.home-news-card:nth-child(2),.home-news-card:nth-child(3){border-top:0}
   .news-hero-v10{min-height:78vh}.news-hero-copy{width:100%;padding:0 20px 70px}.news-hero-copy h1{font-size:clamp(62px,17vw,96px);line-height:.78}.news-intro-v10,.news-feature-v10,.news-editorial-grid-v10,.news-closing-v10{grid-template-columns:1fr}.news-intro-v10{gap:32px}.news-feature-v10{gap:38px}.news-feature-image{height:70vw;min-height:340px}.news-editorial-card-v10{grid-template-rows:62vw auto}.news-closing-v10{gap:34px}
 }
+
+
+/* ===== COS FINAL PATCH: portfolio SEO at bottom + reviews cleanup ===== */
+
+/* Portfolio SEO: no decorative half-circle. */
+.projects-seo-intro-v10::after{
+  display:none!important;
+  content:none!important;
+}
+
+/* Google wordmark uses only COS interiors palette. */
+.google-cos-palette .cos-mahogany{color:var(--mahogany)!important;}
+.google-cos-palette .cos-moss{color:var(--moss)!important;}
+
+/* Review CTA is now plain editorial text — no circle. */
+.google-reviews-editorial .google-review-link-text{
+  width:auto!important;
+  height:auto!important;
+  min-width:0!important;
+  min-height:0!important;
+  padding:0 0 6px!important;
+  border:0!important;
+  border-bottom:1px solid rgba(77,52,45,.7)!important;
+  border-radius:0!important;
+  background:transparent!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  justify-self:end!important;
+  align-self:center!important;
+  font-size:10px!important;
+  font-weight:700!important;
+  line-height:1.2!important;
+  letter-spacing:.15em!important;
+  text-transform:uppercase!important;
+  color:var(--mahogany)!important;
+  white-space:nowrap!important;
+  transition:opacity .2s ease,border-color .2s ease!important;
+}
+.google-reviews-editorial .google-review-link-text:hover{
+  background:transparent!important;
+  color:var(--mahogany)!important;
+  border-color:var(--moss)!important;
+  transform:none!important;
+  opacity:.62!important;
+}
+
+/* Keep layout balanced now that CTA is no longer a large circle. */
+.google-reviews-editorial .google-reviews-inner{
+  grid-template-columns:260px minmax(0,1fr) auto!important;
+  column-gap:56px!important;
+}
+
+@media(max-width:820px){
+  .google-reviews-editorial .google-review-link-text{
+    justify-self:start!important;
+  }
+  .google-reviews-editorial .google-reviews-inner{
+    grid-template-columns:1fr!important;
+    row-gap:20px!important;
+  }
+}
